@@ -1,0 +1,4 @@
+function restar(){
+    ((resultado = $1 - $2))
+    echo $resultado
+}

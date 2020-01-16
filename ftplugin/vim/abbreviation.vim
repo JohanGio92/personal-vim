@@ -1,0 +1,9 @@
+iabbrev <silent> <buffer> function <Esc>:call template#keyword#function<C-V>()<cr>
+iabbrev <silent> <buffer> if <Esc>:call template#keyword#if<C-V>()<cr>
+iabbrev <silent> <buffer> else  <Esc>:call template#keyword#else<C-V>()<cr>
+iabbrev <silent> <buffer> elseif  <Esc>:call template#keyword#elseIf<C-V>()<cr>
+iabbrev <silent> <buffer> augroup  <Esc>:call template#keyword#augroup<C-V>()<cr>
+iabbrev <silent> <buffer> for  <Esc>:call template#keyword#for<C-V>()<cr>
+iabbrev <silent> <buffer> while  <Esc>:call template#keyword#while<C-V>()<cr>
+iabbrev <silent> <buffer> forKey  <Esc>:call template#dataStructure#forKey<C-V>()<cr>
+iabbrev <silent> <buffer> forItem  <Esc>:call template#dataStructure#forItem<C-V>()<cr>

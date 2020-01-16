@@ -1,0 +1,3 @@
+int dividir(int unNumero, int otroNumero){
+    return unNumero / otroNumero;
+}

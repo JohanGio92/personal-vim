@@ -1,0 +1,3 @@
+for [key, value] in items(mydict)                                                                      
+    echo key . ': ' . value                                                                             
+endfor

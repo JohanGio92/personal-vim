@@ -1,0 +1,3 @@
+int sumar(int unNumero, int otroNumero){
+    return unNumero + otroNumero;
+}

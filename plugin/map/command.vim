@@ -1,0 +1,1 @@
+cnoremap aso source %
