@@ -10,3 +10,8 @@
 "    autocmd CmdLineLeave *.[^t][^x][^t] :set iskeyword&
 "augroup END
 
+augroup OmniFunction 
+    autocmd!
+    autocmd VimEnter *.[ch] :set omnifunc=template#templator#complete
+augroup END
+

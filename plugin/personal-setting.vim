@@ -24,4 +24,5 @@ set softtabstop=4
 set wildmenu
 set splitbelow
 set splitright
+set tags=./tags;,tags;
 "}}}

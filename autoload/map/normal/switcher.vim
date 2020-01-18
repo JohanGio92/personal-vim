@@ -54,5 +54,5 @@ function! map#normal#switcher#onMatchPairComandMapping() abort "{{{
     cnoremap ' ''<Left>
 endfunction "}}}
 
-call OnMatchPairInsertMapping()
-call OnMatchPairComandMapping()
+call map#normal#switcher#onMatchPairInsertMapping()
+call map#normal#switcher#onMatchPairComandMapping()

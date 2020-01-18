@@ -1,0 +1,15 @@
+#========= [comment]==========
+objetivo … : dependencias …
+       instrucciones 
+
+OBJECT = file1.o file2.o file3.o
+BINARY = program
+CFLAGS = -g Wall
+
+all: program
+
+program: $(OBJECT)
+	gcc $(CFLAGS) $(BINARY) -o $(OBJECT)
+
+clean: 
+	rm -f $(BINARY) $(OBJECT)
