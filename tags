@@ -14,10 +14,7 @@
 <F2>	plugin/third-party/color-vimrc.vim	/^inoremap <F2> <Esc>:VCoolor<CR>$/;"	m
 <F2>	plugin/third-party/color-vimrc.vim	/^nnoremap <F2> :VCoolor<CR>$/;"	m
 <F8>	plugin/third-party/tagBar.vim	/^nmap <F8> :TagbarToggle<CR>$/;"	m
-<S-TAB>	plugin/third-party/coc.vim	/^inoremap <expr><S-TAB> pumvisible() ? "\\<C-p>" : "\\<C-h>"$/;"	m
-<TAB>	plugin/third-party/coc.vim	/^inoremap <silent><expr> <TAB>$/;"	m
 <TAB>	plugin/third-party/coc.vim	/^nmap <silent> <TAB> <Plug>(coc-range-select)$/;"	m
-<c-space>	plugin/third-party/coc.vim	/^inoremap <silent><expr> <c-space> coc#refresh()$/;"	m
 <cr>	plugin/third-party/coc.vim	/^inoremap <expr> <cr> pumvisible() ? "\\<C-y>" : "\\<C-g>u\\<CR>"$/;"	m
 <leader><	plugin/personal-control-mapping.vim	/^cnoremap <leader>< <lt ><left><bs><right>$/;"	m
 <leader><C-a>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-a> <C-a ><left><bs><right>    $/;"	m
@@ -110,6 +107,7 @@
 AddMatch	ftplugin/vim/complete.vim	/^function! AddMatch(base) abort$/;"	f
 C_extension	ftplugin/c/abbreviation.vim	/^function! C_extension()$/;"	f
 Cextension	ftplugin/c/command.vim	/^command! Cextension :silent call C_extension() $/;"	c
+CocJson	plugin/third-party/coc.vim	/^augroup CocJson$/;"	a
 CompleteEvent	ftplugin/vim/complete.vim	/^function! CompleteEvent() abort$/;"	f
 CompleteFA	ftplugin/css/completation.vim	/^function! CompleteFA(findstart, base)$/;"	f
 CompleteFyleType	plugin/template.vim	/^function! CompleteFyleType(findstart, base) abort "{{{$/;"	f
@@ -139,11 +137,12 @@ Templates	plugin/template.vim	/^function! Templates(fileName, pattern) "{{{$/;"	
 ]g	plugin/third-party/coc.vim	/^nmap <silent> ]g <Plug>(coc-diagnostic-next)$/;"	m
 af	plugin/third-party/coc.vim	/^omap af <Plug>(coc-funcobj-a)$/;"	m
 aso	plugin/map/command.vim	/^cnoremap aso source %$/;"	m
-check_back_space	plugin/third-party/coc.vim	/^function! s:check_back_space() abort$/;"	f
 filetype_vim	plugin/third-party/folding.vim	/^augroup filetype_vim$/;"	a
 g:auto_save	plugin/third-party/autosave.vim	/^let g:auto_save = 1  " enable AutoSave on Vim startup$/;"	v
 g:keywordSwitched	autoload/map/normal/switcher.vim	/^let g:keywordSwitched = 1$/;"	v
 g:lightline	plugin/third-party/lightline.vim	/^let g:lightline = {$/;"	v
+g:livepreview_engine	plugin/third-party/vim-latex-live-preview.vim	/^let g:livepreview_engine = 'pdflatex'$/;"	v
+g:livepreview_previewer	plugin/third-party/vim-latex-live-preview.vim	/^let g:livepreview_previewer = 'FoxitReader'$/;"	v
 g:multi_cursor_next_key	plugin/third-party/multiple-cursor.vim	/^let g:multi_cursor_next_key            = '<C-n>'$/;"	v
 g:multi_cursor_prev_key	plugin/third-party/multiple-cursor.vim	/^let g:multi_cursor_prev_key            = '<C-p>'$/;"	v
 g:multi_cursor_quit_key	plugin/third-party/multiple-cursor.vim	/^let g:multi_cursor_quit_key            = '<Esc>'$/;"	v
@@ -154,16 +153,19 @@ g:multi_cursor_start_key	plugin/third-party/multiple-cursor.vim	/^let g:multi_cu
 g:multi_cursor_start_word_key	plugin/third-party/multiple-cursor.vim	/^let g:multi_cursor_start_word_key      = '<C-n>'$/;"	v
 g:multi_cursor_use_default_mapping	plugin/third-party/multiple-cursor.vim	/^let g:multi_cursor_use_default_mapping=0$/;"	v
 g:switchmapped	autoload/map/normal/switcher.vim	/^let g:switchmapped = 1$/;"	v
-g:syntastic_always_populate_loc_list	plugin/third-party/syntaxis.vim	/^let g:syntastic_always_populate_loc_list = 1$/;"	v
-g:syntastic_auto_loc_list	plugin/third-party/syntaxis.vim	/^let g:syntastic_auto_loc_list = 1$/;"	v
-g:syntastic_check_on_open	plugin/third-party/syntaxis.vim	/^let g:syntastic_check_on_open = 1$/;"	v
-g:syntastic_check_on_wq	plugin/third-party/syntaxis.vim	/^let g:syntastic_check_on_wq = 0$/;"	v
+g:syntastic_always_populate_loc_list	plugin/third-party/syntastic.vim	/^let g:syntastic_always_populate_loc_list = 1$/;"	v
+g:syntastic_auto_loc_list	plugin/third-party/syntastic.vim	/^let g:syntastic_auto_loc_list = 1$/;"	v
+g:syntastic_check_on_open	plugin/third-party/syntastic.vim	/^let g:syntastic_check_on_open = 1$/;"	v
+g:syntastic_check_on_wq	plugin/third-party/syntastic.vim	/^let g:syntastic_check_on_wq = 0$/;"	v
 g:template_path	autoload/template/templator.vim	/^let g:template_path = "~\/.vim\/bundle\/personal-vim\/template\/"$/;"	v
 g:template_path	plugin/template.vim	/^let g:template_path = "~\/.vim\/bundle\/personal-vim\/template\/"$/;"	v
 g:trans_default_direction	plugin/third-party/translate.vim	/^let g:trans_default_direction="en:es"$/;"	v
 g:unite_force_overwrite_statusline	plugin/third-party/lightline.vim	/^let g:unite_force_overwrite_statusline = 0$/;"	v
 g:vimfiler_force_overwrite_statusline	plugin/third-party/lightline.vim	/^let g:vimfiler_force_overwrite_statusline = 0$/;"	v
 g:vimshell_force_overwrite_statusline	plugin/third-party/lightline.vim	/^let g:vimshell_force_overwrite_statusline = 0$/;"	v
+g:ycm_clangd_args	plugin/third-party/youcompletme.vim	/^let g:ycm_clangd_args = ['-log=verbose', '-pretty']$/;"	v
+g:ycm_clangd_binary_path	plugin/third-party/youcompletme.vim	/^let g:ycm_clangd_binary_path = exepath("clangd")$/;"	v
+g:ycm_clangd_uses_ycmd_caching	plugin/third-party/youcompletme.vim	/^let g:ycm_clangd_uses_ycmd_caching = 0$/;"	v
 gd	plugin/third-party/coc.vim	/^nmap <silent> gd <Plug>(coc-definition)$/;"	m
 gi	plugin/third-party/coc.vim	/^nmap <silent> gi <Plug>(coc-implementation)$/;"	m
 gr	plugin/third-party/coc.vim	/^nmap <silent> gr <Plug>(coc-references)$/;"	m
