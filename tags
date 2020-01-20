@@ -13,8 +13,12 @@
 <Enter>	plugin/map/normal.vim	/^nnoremap <Enter> a<Enter><Esc>k\$$/;"	m
 <F2>	plugin/third-party/color-vimrc.vim	/^inoremap <F2> <Esc>:VCoolor<CR>$/;"	m
 <F2>	plugin/third-party/color-vimrc.vim	/^nnoremap <F2> :VCoolor<CR>$/;"	m
+<F5>	plugin/third-party/youcompletme.vim	/^nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>$/;"	m
 <F8>	plugin/third-party/tagBar.vim	/^nmap <F8> :TagbarToggle<CR>$/;"	m
+<S-TAB>	plugin/third-party/coc.vim	/^inoremap <expr><S-TAB> pumvisible() ? "\\<C-p>" : "\\<C-h>"$/;"	m
+<TAB>	plugin/third-party/coc.vim	/^inoremap <silent><expr> <TAB>$/;"	m
 <TAB>	plugin/third-party/coc.vim	/^nmap <silent> <TAB> <Plug>(coc-range-select)$/;"	m
+<c-j>	plugin/third-party/coc.vim	/^inoremap <silent><expr> <c-j> coc#refresh()$/;"	m
 <cr>	plugin/third-party/coc.vim	/^inoremap <expr> <cr> pumvisible() ? "\\<C-y>" : "\\<C-g>u\\<CR>"$/;"	m
 <leader><	plugin/personal-control-mapping.vim	/^cnoremap <leader>< <lt ><left><bs><right>$/;"	m
 <leader><C-a>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-a> <C-a ><left><bs><right>    $/;"	m
@@ -137,6 +141,7 @@ Templates	plugin/template.vim	/^function! Templates(fileName, pattern) "{{{$/;"	
 ]g	plugin/third-party/coc.vim	/^nmap <silent> ]g <Plug>(coc-diagnostic-next)$/;"	m
 af	plugin/third-party/coc.vim	/^omap af <Plug>(coc-funcobj-a)$/;"	m
 aso	plugin/map/command.vim	/^cnoremap aso source %$/;"	m
+check_back_space	plugin/third-party/coc.vim	/^function! s:check_back_space() abort$/;"	f
 filetype_vim	plugin/third-party/folding.vim	/^augroup filetype_vim$/;"	a
 g:auto_save	plugin/third-party/autosave.vim	/^let g:auto_save = 1  " enable AutoSave on Vim startup$/;"	v
 g:keywordSwitched	autoload/map/normal/switcher.vim	/^let g:keywordSwitched = 1$/;"	v
@@ -163,9 +168,25 @@ g:trans_default_direction	plugin/third-party/translate.vim	/^let g:trans_default
 g:unite_force_overwrite_statusline	plugin/third-party/lightline.vim	/^let g:unite_force_overwrite_statusline = 0$/;"	v
 g:vimfiler_force_overwrite_statusline	plugin/third-party/lightline.vim	/^let g:vimfiler_force_overwrite_statusline = 0$/;"	v
 g:vimshell_force_overwrite_statusline	plugin/third-party/lightline.vim	/^let g:vimshell_force_overwrite_statusline = 0$/;"	v
+g:ycm_auto_trigger	plugin/third-party/youcompletme.vim	/^let g:ycm_auto_trigger = 1$/;"	v
 g:ycm_clangd_args	plugin/third-party/youcompletme.vim	/^let g:ycm_clangd_args = ['-log=verbose', '-pretty']$/;"	v
 g:ycm_clangd_binary_path	plugin/third-party/youcompletme.vim	/^let g:ycm_clangd_binary_path = exepath("clangd")$/;"	v
 g:ycm_clangd_uses_ycmd_caching	plugin/third-party/youcompletme.vim	/^let g:ycm_clangd_uses_ycmd_caching = 0$/;"	v
+g:ycm_collect_identifiers_from_tags_files	plugin/third-party/youcompletme.vim	/^let g:ycm_collect_identifiers_from_tags_files = 1  " be carefull may be your program too slow$/;"	v
+g:ycm_complete_in_strings	plugin/third-party/youcompletme.vim	/^let g:ycm_complete_in_strings = 1$/;"	v
+g:ycm_enable_diagnostic_highlighting	plugin/third-party/youcompletme.vim	/^let g:ycm_enable_diagnostic_highlighting = 1$/;"	v
+g:ycm_error_symbol	plugin/third-party/youcompletme.vim	/^let g:ycm_error_symbol = '>>'$/;"	v
+g:ycm_extra_conf_vim_data	plugin/third-party/youcompletme.vim	/^let g:ycm_extra_conf_vim_data = [$/;"	v
+g:ycm_global_ycm_extra_conf	plugin/third-party/youcompletme.vim	/^let g:ycm_global_ycm_extra_conf = '~\/global_extra_conf.py'$/;"	v
+g:ycm_key_invoke_completion	plugin/third-party/youcompletme.vim	/^let g:ycm_key_invoke_completion = '<C-h>'$/;"	v
+g:ycm_max_num_candidates	plugin/third-party/youcompletme.vim	/^let g:ycm_max_num_candidates = 50$/;"	v
+g:ycm_min_num_identifier_candidate_chars	plugin/third-party/youcompletme.vim	/^let g:ycm_min_num_identifier_candidate_chars = 0$/;"	v
+g:ycm_min_num_of_chars_for_completion	plugin/third-party/youcompletme.vim	/^let g:ycm_min_num_of_chars_for_completion = 1$/;"	v
+g:ycm_python_interpreter_path	plugin/third-party/youcompletme.vim	/^let g:ycm_python_interpreter_path = ''$/;"	v
+g:ycm_python_sys_path	plugin/third-party/youcompletme.vim	/^let g:ycm_python_sys_path = []$/;"	v
+g:ycm_seed_identifiers_with_syntax	plugin/third-party/youcompletme.vim	/^let g:ycm_seed_identifiers_with_syntax = 1$/;"	v
+g:ycm_use_clangd	plugin/third-party/youcompletme.vim	/^let g:ycm_use_clangd = 0$/;"	v
+g:ycm_warning_symbol	plugin/third-party/youcompletme.vim	/^let g:ycm_warning_symbol = 'W'$/;"	v
 gd	plugin/third-party/coc.vim	/^nmap <silent> gd <Plug>(coc-definition)$/;"	m
 gi	plugin/third-party/coc.vim	/^nmap <silent> gi <Plug>(coc-implementation)$/;"	m
 gr	plugin/third-party/coc.vim	/^nmap <silent> gr <Plug>(coc-references)$/;"	m
