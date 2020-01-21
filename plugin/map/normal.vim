@@ -26,6 +26,7 @@ function! s:CreateNormalLeaderMap() abort "{{{
     nnoremap <Leader><Enter> :NERDTreeToggle<CR>
     nnoremap <Leader><Leader> :
     nnoremap <Leader>fd I"-----------[ NameFolding ]------------{{{<cr><cr>}}}<Esc><up>x
+    nnoremap <Leader>bd :bd!<cr>
 endfunction "}}}
 
 function! s:CreateNormalF1ToF12Map() abort "{{{
@@ -39,7 +40,7 @@ function! s:CreateNormalFoldingMap() abort "{{{
     nnoremap z<Down> zj
 endfunction "}}}
 
-nmap <space> /
+nmap <C-F> /
 nnoremap <Enter> a<Enter><Esc>k$
 
 call <SID>CreateNormalEspaciadorMap()

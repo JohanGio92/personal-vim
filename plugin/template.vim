@@ -32,4 +32,4 @@ function! CompleteFyleType(findstart, base) abort "{{{
     endif
 endfunction "}}}
 
-set omnifunc=template#templator#complete
+set omnifunc=template#templator#construir
