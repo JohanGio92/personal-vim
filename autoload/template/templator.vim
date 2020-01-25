@@ -7,10 +7,10 @@ function! template#templator#construir(fileName, pattern)
     let l:previous = ".-1"
 
     silent execute l:previous . ":read " . l:complete_path 
-    echom "Autocomplete Successfull"
+    "echom "Autocomplete Successfull"
     execute ":normal! zR"
     execute ":normal! " . '/' . a:pattern . "\<cr>"
-    normal viw
+    "normal viw
 endfunction
 
 function! template#templator#complete(findstart, base) abort "{{{
@@ -32,3 +32,4 @@ function! template#templator#complete(findstart, base) abort "{{{
 	return resutlMatch
     endif
 endfunction "}}}
+

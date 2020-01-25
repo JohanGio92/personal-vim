@@ -11,3 +11,7 @@ function! s:CreateVisualMatchPairMap() abort "{{{
 endfunction "}}}
 
 call <SID>CreateVisualMatchPairMap()
+vnoremap gn <Esc>nviw
+vnoremap gN <Esc>NNviw
+vnoremap gp <Esc>NNviw
+

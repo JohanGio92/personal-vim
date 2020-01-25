@@ -85,6 +85,9 @@
 <leader>\|	plugin/personal-control-mapping.vim	/^cnoremap <leader>\\| <Bar ><left><bs><right>$/;"	m
 <leader>g	plugin/third-party/grepHardWay.vim	/^nnoremap <leader>g :set operatorfunc=<SID>GrepOperator<cr>g@$/;"	m
 <leader>g	plugin/third-party/grepHardWay.vim	/^vnoremap <leader>g :<c-u>call <SID>GrepOperator(visualmode())<cr>$/;"	m
+<leader>gN	plugin/map/insert.vim	/^inoremap <leader>gN <Esc>NNviw$/;"	m
+<leader>gn	plugin/map/insert.vim	/^inoremap <leader>gn <Esc>nviw$/;"	m
+<leader>gp	plugin/map/insert.vim	/^inoremap <leader>gp <Esc>NNviw$/;"	m
 <leader>h	plugin/third-party/highliter.vim	/^nnoremap <silent> <leader>h :call InterestingWords('n')<cr>$/;"	m
 <leader>h	plugin/third-party/highliter.vim	/^nnoremap <silent> <leader>h :call UncolorAllWords()<cr>$/;"	m
 <leader>ln	ftplugin/help/mapping.vim	/^nnoremap <buffer> <leader>ln :call Link<C-V>()<cr> $/;"	m
@@ -138,7 +141,7 @@ g:livepreview_previewer	plugin/third-party/vim-latex-live-preview.vim	/^let g:li
 g:multi_cursor_next_key	plugin/third-party/multiple-cursor.vim	/^let g:multi_cursor_next_key            = '<C-n>'$/;"	v
 g:multi_cursor_prev_key	plugin/third-party/multiple-cursor.vim	/^let g:multi_cursor_prev_key            = '<C-p>'$/;"	v
 g:multi_cursor_quit_key	plugin/third-party/multiple-cursor.vim	/^let g:multi_cursor_quit_key            = '<Esc>'$/;"	v
-g:multi_cursor_select_all_key	plugin/third-party/multiple-cursor.vim	/^let g:multi_cursor_select_all_key      = 'g<A-n>'$/;"	v
+g:multi_cursor_select_all_key	plugin/third-party/multiple-cursor.vim	/^let g:multi_cursor_select_all_key      = 'g<M-n>'$/;"	v
 g:multi_cursor_select_all_word_key	plugin/third-party/multiple-cursor.vim	/^let g:multi_cursor_select_all_word_key = '<A-n>'$/;"	v
 g:multi_cursor_skip_key	plugin/third-party/multiple-cursor.vim	/^let g:multi_cursor_skip_key            = '<C-x>'$/;"	v
 g:multi_cursor_start_key	plugin/third-party/multiple-cursor.vim	/^let g:multi_cursor_start_key           = 'g<C-n>'$/;"	v
@@ -178,6 +181,9 @@ g:ycm_python_sys_path	plugin/third-party/youcompletme.vim	/^let g:ycm_python_sys
 g:ycm_seed_identifiers_with_syntax	plugin/third-party/youcompletme.vim	/^let g:ycm_seed_identifiers_with_syntax = 1$/;"	v
 g:ycm_use_clangd	plugin/third-party/youcompletme.vim	/^let g:ycm_use_clangd = 1$/;"	v
 g:ycm_warning_symbol	plugin/third-party/youcompletme.vim	/^let g:ycm_warning_symbol = '⚠️ '$/;"	v
+gN	plugin/map/visual.vim	/^vnoremap gN <Esc>NNviw$/;"	m
+gn	plugin/map/visual.vim	/^vnoremap gn <Esc>nviw$/;"	m
+gp	plugin/map/visual.vim	/^vnoremap gp <Esc>NNviw$/;"	m
 map#normal#espaciador#agnadirNumeroDeLinea	autoload/map/normal/espaciador.vim	/^function! map#normal#espaciador#agnadirNumeroDeLinea()$/;"	f
 map#normal#espaciador#espaciarAbajo	autoload/map/normal/espaciador.vim	/^function! map#normal#espaciador#espaciarAbajo()$/;"	f
 map#normal#espaciador#espaciarArriba	autoload/map/normal/espaciador.vim	/^function! map#normal#espaciador#espaciarArriba()$/;"	f
@@ -224,4 +230,6 @@ template#templator#complete	autoload/template/templator.vim	/^function! template
 template#templator#construir	autoload/template/templator.vim	/^function! template#templator#construir(fileName, pattern)$/;"	f
 vim#mapper#mapArrow	autoload/vim/mapper.vim	/^function! vim#mapper#mapArrow() abort "{{{$/;"	f
 vim#mapper#mapControlInInsertMode	autoload/vim/mapper.vim	/^function! vim#mapper#mapControlInInsertMode() abort "{{{$/;"	f
+vim#mapper#mapMetaCapitalInInsertMode	autoload/vim/mapper.vim	/^function! vim#mapper#mapMetaCapitalInInsertMode() abort "{{{$/;"	f
+vim#mapper#mapMetaLowerInInsertMode	autoload/vim/mapper.vim	/^function! vim#mapper#mapMetaLowerInInsertMode() abort "{{{$/;"	f
 vim#mapper#mapShiftInInsertMode	autoload/vim/mapper.vim	/^function! vim#mapper#mapShiftInInsertMode() abort "{{{$/;"	f

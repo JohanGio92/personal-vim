@@ -1,3 +1,5 @@
 call vim#mapper#mapShiftInInsertMode()
 call vim#mapper#mapControlInInsertMode()
 call vim#mapper#mapArrow()
+call vim#mapper#mapMetaLowerInInsertMode()
+call vim#mapper#mapMetaCapitalInInsertMode()
