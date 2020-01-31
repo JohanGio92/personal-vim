@@ -15,3 +15,8 @@ augroup OmniFunction
     autocmd VimEnter *.[ch] :set omnifunc=template#templator#complete
 augroup END
 
+augroup VimInit
+    autocmd!
+    autocmd VimEnter,BufReadPost * :normal G
+augroup END
+
