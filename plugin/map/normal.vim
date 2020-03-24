@@ -1,3 +1,5 @@
+let g:matchPairs = ["''", "<>", "{}", '""', '[]', "()"]
+
 function! s:CreateNormalEspaciadorMap() abort "{{{
     nnoremap <c-down> :<C-U>call map#normal#espaciador#espaciarAbajo()<cr>
     nnoremap <c-up> :<C-U>call map#normal#espaciador#espaciarArriba()<cr>
@@ -31,8 +33,6 @@ endfunction "}}}
 
 function! s:CreateNormalF1ToF12Map() abort "{{{
     nnoremap <F1> :tab help<CR>
-    noremap <F3> :call map#normal#switcher#switchKeyword()<cr>
-    nnoremap <F4> :call map#normal#switcher#switchMatchPairMapping()<CR>
 endfunction "}}}
 
 function! s:CreateNormalFoldingMap() abort "{{{
@@ -40,10 +40,26 @@ function! s:CreateNormalFoldingMap() abort "{{{
     nnoremap z<Down> zj
 endfunction "}}}
 
+function! s:Tag(tag) abort
+	execute v:count1 . a:tag 
+endfunction
+
 nmap <C-F> /
-nnoremap <Enter> a<Enter><Esc>k$
+nnoremap <space>t :tags<cr>
+nnoremap ]n :<C-U>call <SID>Tag("tag")<cr>
+nnoremap [n :<C-U>call <SID>Tag("pop")<cr>
+nnoremap bd :bwipeout<cr>
+" nnoremap <Enter> a<Enter><Esc>k$
 
 call <SID>CreateNormalEspaciadorMap()
 call <SID>CreateNormalLeaderMap()
 call <SID>CreateNormalF1ToF12Map()
 call <SID>CreateNormalFoldingMap()
+
+map <up> k
+map <down> j
+map <right> l
+map <left> h
+
+call map#normal#switcher#onMatchPairMapping('i')
+call map#normal#switcher#onMatchPairMapping('c')

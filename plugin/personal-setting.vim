@@ -9,14 +9,13 @@ set binary " permite leer archivos binarios
 set showcmd " muestran los comandos en la parte de abajo de la derecha
 set incsearch
 set hlsearch
-ret showbreak=>\ 
-set tabstop=8
+set showbreak=>\ 
+set tabstop=4
 set shiftwidth=4
 set shiftround
 set tildeop " espara usar ~ con motion
 set undolevels=5000
 set dictionary=/usr/share/dict/american-english
-set dictionary+=/usr/share/dict/spanish
 set nrformats+=alpha
 set history=100
 set autochdir 

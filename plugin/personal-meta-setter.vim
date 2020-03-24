@@ -1,3 +1,6 @@
+if !has('nvim')
+	execute "set <M-n>=\en"
+endif
 " execute "set <M-a>=\ea"
 " execute "set <M-b>=\eb"
 " execute "set <M-c>=\ec"
@@ -11,7 +14,7 @@
 " execute "set <M-k>=\ek"
 " execute "set <M-l>=\el"
 " execute "set <M-m>=\em"
-execute "set <M-n>=\en"
+" execute "set <M-n>=\en"
 " execute "set <M-o>=\eo"
 " execute "set <M-p>=\ep"
 " execute "set <M-q>=\eq"

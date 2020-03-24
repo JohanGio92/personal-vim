@@ -1,0 +1,8 @@
+\documentclass[12pt,a4paper,oneside]{book}
+\input{package.tex}
+
+\begin{document}
+
+\tableofcontents
+\input{printer.tex}
+\end{document}

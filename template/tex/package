@@ -1,0 +1,51 @@
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{tocbibind}
+\usepackage{tocloft}
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{lmodern}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=red,bookmarksopen=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{comment}
+\usepackage{wrapfig}
+\usepackage{fancyhdr}
+\usepackage{ragged2e}
+\usepackage{minted}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{afterpage}
+\usepackage{pdfpages}
+\usepackage{lipsum}
+\usepackage{framed}
+\usepackage{marginnote}
+\usepackage[normalem]{ulem} %tipos de underline
+\usepackage{pifont} % symbolos
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning,shapes.geometric, arrows}
+
+\renewcommand \cftchapdotsep{4.5}
+\renewcommand{\contentsname}{Tabla de Contenidos}
+
+\input{reference.tex}
+\input{glossary.tex}
+\input{book.tex}
+
+\graphicspath{ {images/} }
+% optional empty, myheadings, plain
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Overleaf}
+\lhead{Guides-and-tutorials}
+\rfoot{Page-\thepage}
+
+\renewcommand\thesection{\arabic{section}}

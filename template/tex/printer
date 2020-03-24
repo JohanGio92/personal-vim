@@ -1,0 +1,8 @@
+\renewcommand{\listfigurename}{Figures}
+\renewcommand{\listtablename}{Tables}
+
+\printglossary[title= Glossario, toctitle=Glossario] 
+\printglossary[title= Acronym, toctitle=Acronym, type=\acronymtype]
+\listoftables
+\listoffigures
+\printindex

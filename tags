@@ -4,27 +4,33 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+'a	ftplugin/tex/insert-map.vim	/^inoremap 'a \\'{a}$/;"	m
+'e	ftplugin/tex/insert-map.vim	/^inoremap 'e \\'{e}$/;"	m
+'i	ftplugin/tex/insert-map.vim	/^inoremap 'i \\'{i}$/;"	m
+'o	ftplugin/tex/insert-map.vim	/^inoremap 'o \\'{o}$/;"	m
+'u	ftplugin/tex/insert-map.vim	/^inoremap 'u \\'{u}$/;"	m
 <C-E>	ftplugin/tex/completation.vim	/^inoremap <C-E> <C-R>=CompleteEvent()<cr>$/;"	m
 <C-E>	ftplugin/vim/complete.vim	/^inoremap <C-E> <C-R>=CompleteEvent()<cr>$/;"	m
 <C-F>	plugin/map/normal.vim	/^nmap <C-F> \/$/;"	m
 <C-d>	plugin/map/insert.vim	/^inoremap <C-d> <C-x><C-k>$/;"	m
-<C-j>	plugin/third-party/coc-snippet.vim	/^imap <C-j> <Plug>(coc-snippets-expand-jump)$/;"	m
-<C-j>	plugin/third-party/coc-snippet.vim	/^vmap <C-j> <Plug>(coc-snippets-select)$/;"	m
+<C-f>	plugin/map/insert.vim	/^inoremap <C-f> <C-x><C-f>$/;"	m
 <C-l>	plugin/map/insert.vim	/^inoremap <C-l> <C-x><C-l>$/;"	m
 <C-m>	plugin/personal-complete.vim	/^inoremap <expr> <C-m> pumvisible() ?  "\\<C-n>" : "\\<C-m>"$/;"	m
 <C-o>	plugin/map/insert.vim	/^inoremap <C-o> <C-x><C-o>$/;"	m
-<C-space>	plugin/third-party/coc-snippet.vim	/^imap <C-space> <Plug>(coc-snippets-expand)$/;"	m
 <C-t>	plugin/map/insert.vim	/^inoremap <C-t> <C-x><C-t>$/;"	m
 <C-t>	plugin/personal-complete.vim	/^inoremap <C-t> <C-r>=MyComplete()<CR>$/;"	m
-<Enter>	plugin/map/normal.vim	/^nnoremap <Enter> a<Enter><Esc>k\$$/;"	m
+<C-u>	plugin/map/insert.vim	/^inoremap <C-u> <C-x><C-u>$/;"	m
+<C-v>	plugin/map/insert.vim	/^inoremap <C-v> <C-x><C-v>$/;"	m
 <F2>	plugin/third-party/color-vimrc.vim	/^inoremap <F2> <Esc>:VCoolor<CR>$/;"	m
 <F2>	plugin/third-party/color-vimrc.vim	/^nnoremap <F2> :VCoolor<CR>$/;"	m
 <F5>	plugin/third-party/youcompletme.vim	/^nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>$/;"	m
 <F8>	plugin/third-party/tagBar.vim	/^nmap <F8> :TagbarToggle<CR>$/;"	m
+<S-TAB>	plugin/third-party/coc.vim	/^inoremap <expr><S-TAB> pumvisible() ? "\\<C-p>" : "\\<C-h>"$/;"	m
 <TAB>	plugin/third-party/coc.vim	/^inoremap <silent><expr> <TAB>$/;"	m
 <TAB>	plugin/third-party/coc.vim	/^nmap <silent> <TAB> <Plug>(coc-range-select)$/;"	m
-<c-m>	plugin/third-party/coc.vim	/^inoremap <silent><expr> <c-m> coc#refresh()$/;"	m
+<c-space>	plugin/third-party/coc.vim	/^inoremap <silent><expr> <c-space> coc#refresh()$/;"	m
 <cr>	plugin/third-party/coc.vim	/^inoremap <expr> <cr> pumvisible() ? "\\<C-y>" : "\\<C-g>u\\<CR>"$/;"	m
+<down>	plugin/map/normal.vim	/^map <down> j$/;"	m
 <leader><	plugin/personal-control-mapping.vim	/^cnoremap <leader>< <lt ><left><bs><right>$/;"	m
 <leader><C-a>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-a> <C-a ><left><bs><right>    $/;"	m
 <leader><C-b>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-b> <C-b ><left><bs><right>$/;"	m
@@ -108,24 +114,63 @@
 <leader>tg	ftplugin/help/mapping.vim	/^nnoremap <buffer> <leader>tg :call Tag<C-V>()<cr> $/;"	m
 <leader>tr	plugin/third-party/translate.vim	/^nnoremap <silent> <leader>tr :Trans -brief<CR>$/;"	m
 <leader>tr	plugin/third-party/translate.vim	/^vnoremap <silent> <leader>tr :Trans -brief<CR>$/;"	m
+<left>	plugin/map/normal.vim	/^map <left> h$/;"	m
+<localleader>"	ftplugin/tex/insert-map.vim	/^inoremap <localleader>" ``''<left><left>$/;"	m
+<localleader>'	ftplugin/tex/insert-map.vim	/^inoremap <localleader>' `'<left>$/;"	m
 <localleader>1	ftplugin/snippets/personal_snippet.vim	/^inoremap <localleader>1 ${1:}<left>$/;"	m
 <localleader>1	ftplugin/snippets/personal_snippet.vim	/^nnoremap <localleader>1 i${1:}<left>$/;"	m
+<localleader>1	ftplugin/snippets/personal_snippet.vim	/^vnoremap <localleader>1 :<C-U>call PutNumber('1:')<cr>$/;"	m
 <localleader>2	ftplugin/snippets/personal_snippet.vim	/^inoremap <localleader>2 ${2:}<left>$/;"	m
 <localleader>2	ftplugin/snippets/personal_snippet.vim	/^nnoremap <localleader>2 i${2:}<left>$/;"	m
+<localleader>2	ftplugin/snippets/personal_snippet.vim	/^vnoremap <localleader>2 :<C-U>call PutNumber('2:')<cr>$/;"	m
 <localleader>3	ftplugin/snippets/personal_snippet.vim	/^inoremap <localleader>3 ${3:}<left>$/;"	m
 <localleader>3	ftplugin/snippets/personal_snippet.vim	/^nnoremap <localleader>3 i${3:}<left>$/;"	m
+<localleader>3	ftplugin/snippets/personal_snippet.vim	/^vnoremap <localleader>3 :<C-U>call PutNumber('3:')<cr>$/;"	m
 <localleader>4	ftplugin/snippets/personal_snippet.vim	/^inoremap <localleader>4 ${4:}<left>$/;"	m
 <localleader>4	ftplugin/snippets/personal_snippet.vim	/^nnoremap <localleader>4 i${4:}<left>$/;"	m
+<localleader>4	ftplugin/snippets/personal_snippet.vim	/^vnoremap <localleader>4 :<C-U>call PutNumber('4:')<cr>$/;"	m
 <localleader>5	ftplugin/snippets/personal_snippet.vim	/^inoremap <localleader>5 ${5:}<left>$/;"	m
 <localleader>5	ftplugin/snippets/personal_snippet.vim	/^nnoremap <localleader>5 i${5:}<left>$/;"	m
+<localleader>5	ftplugin/snippets/personal_snippet.vim	/^vnoremap <localleader>5 :<C-U>call PutNumber('5:')<cr>$/;"	m
 <localleader>6	ftplugin/snippets/personal_snippet.vim	/^inoremap <localleader>6 ${6:}<left>$/;"	m
 <localleader>6	ftplugin/snippets/personal_snippet.vim	/^nnoremap <localleader>6 i${6:}<left>$/;"	m
+<localleader>6	ftplugin/snippets/personal_snippet.vim	/^vnoremap <localleader>6 :<C-U>call PutNumber('6:')<cr>$/;"	m
 <localleader>7	ftplugin/snippets/personal_snippet.vim	/^inoremap <localleader>7 ${7:}<left>$/;"	m
 <localleader>7	ftplugin/snippets/personal_snippet.vim	/^nnoremap <localleader>7 i${7:}<left>$/;"	m
+<localleader>7	ftplugin/snippets/personal_snippet.vim	/^vnoremap <localleader>7 :<C-U>call PutNumber('7:')<cr>$/;"	m
 <localleader>8	ftplugin/snippets/personal_snippet.vim	/^inoremap <localleader>8 ${8:}<left>$/;"	m
 <localleader>8	ftplugin/snippets/personal_snippet.vim	/^nnoremap <localleader>8 i${8:}<left>$/;"	m
+<localleader>8	ftplugin/snippets/personal_snippet.vim	/^vnoremap <localleader>8 :<C-U>call PutNumber('8:')<cr>$/;"	m
 <localleader>9	ftplugin/snippets/personal_snippet.vim	/^inoremap <localleader>9 ${9:}<left>$/;"	m
 <localleader>9	ftplugin/snippets/personal_snippet.vim	/^nnoremap <localleader>9 i${9:}<left>$/;"	m
+<localleader>9	ftplugin/snippets/personal_snippet.vim	/^vnoremap <localleader>9 :<C-U>call PutNumber('9:')<cr>$/;"	m
+<localleader><down>	ftplugin/tex/insert-map.vim	/^inoremap <localleader><down> \\centering$/;"	m
+<localleader><left>	ftplugin/tex/insert-map.vim	/^inoremap <localleader><left> \\raggedleft$/;"	m
+<localleader><right>	ftplugin/tex/insert-map.vim	/^inoremap <localleader><right> \\raggedright$/;"	m
+<localleader>=	ftplugin/tex/normal-map.vim	/^nnoremap <localleader>= :VimtexDocPackage $/;"	m
+<localleader>Gl	ftplugin/tex/visual-map.vim	/^vnoremap <localleader>Gl :<C-U>call TexCommand('\\Gls')<cr>$/;"	m
+<localleader>ac	ftplugin/tex/normal-map.vim	/^nnoremap <localleader>ac iacronym$/;"	m
+<localleader>af	ftplugin/tex/visual-map.vim	/^vnoremap <localleader>af :<C-U>call TexCommand('\\acrfull')<cr>$/;"	m
+<localleader>al	ftplugin/tex/visual-map.vim	/^vnoremap <localleader>al :<C-U>call TexCommand('\\acrlong')<cr>$/;"	m
+<localleader>as	ftplugin/tex/visual-map.vim	/^vnoremap <localleader>as :<C-U>call TexCommand('\\acrshort')<cr>$/;"	m
+<localleader>bf	ftplugin/tex/visual-map.vim	/^vnoremap <localleader>bf :<C-U>call TexCommand('\\textbf')<cr>$/;"	m
+<localleader>cd	ftplugin/tex/normal-map.vim	/^nnoremap <localleader>cd icode$/;"	m
+<localleader>cl	ftplugin/tex/normal-map.vim	/^nnoremap <localleader>cl icolor$/;"	m
+<localleader>ft	ftplugin/tex/normal-map.vim	/^nnoremap <localleader>ft ifooter$/;"	m
+<localleader>gl	ftplugin/tex/visual-map.vim	/^vnoremap <localleader>gl :<C-U>call TexCommand('\\gls')<cr>$/;"	m
+<localleader>gs	ftplugin/tex/normal-map.vim	/^nnoremap <localleader>gs iglossar$/;"	m
+<localleader>hd	ftplugin/tex/normal-map.vim	/^nnoremap <localleader>hd iheader$/;"	m
+<localleader>hp	ftplugin/tex/normal-map.vim	/^nnoremap <localleader>hp ihyper$/;"	m
+<localleader>id	ftplugin/tex/normal-map.vim	/^nnoremap <localleader>id iindex$/;"	m
+<localleader>id	ftplugin/tex/visual-map.vim	/^vnoremap <localleader>id :<C-U>call TexCommand('\\index')<cr>$/;"	m
+<localleader>if	ftplugin/tex/visual-map.vim	/^vnoremap <localleader>if :<C-U>call TexCommand('\\textit')<cr>$/;"	m
+<localleader>in	ftplugin/tex/normal-map.vim	/^nnoremap <localleader>in iinclude$/;"	m
+<localleader>it	ftplugin/tex/insert-map.vim	/^inoremap <localleader>it \\item<space>$/;"	m
+<localleader>mt	ftplugin/tex/normal-map.vim	/^nnoremap <localleader>mt iminted$/;"	m
+<localleader>pt	ftplugin/tex/normal-map.vim	/^nnoremap <localleader>pt ipicture$/;"	m
+<localleader>rf	ftplugin/tex/normal-map.vim	/^nnoremap <localleader>rf ireference$/;"	m
+<localleader>tb	ftplugin/tex/normal-map.vim	/^nnoremap <localleader>tb itable$/;"	m
+<right>	plugin/map/normal.vim	/^map <right> l$/;"	m
 <space>b	plugin/third-party/denite.vim	/^nnoremap <space>b :Denite buffer -winheight=10<cr>$/;"	m
 <space>c	plugin/third-party/coc.vim	/^nnoremap <silent> <space>c  :<C-u>CocList commands<cr>$/;"	m
 <space>cs	plugin/third-party/denite.vim	/^nnoremap <space>cs :Denite colorscheme -split=vertical -winwidth=15<cr>$/;"	m
@@ -142,8 +187,26 @@
 <space>rh	plugin/third-party/denite.vim	/^nnoremap <space>rh :Denite file\/rec -split=horizontal -winheight=10<cr>¬$/;"	m
 <space>rv	plugin/third-party/denite.vim	/^nnoremap <space>rv :Denite file\/rec -split=vertical -winwidth=25<cr> $/;"	m
 <space>s	plugin/third-party/coc.vim	/^nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>$/;"	m
+<up>	plugin/map/normal.vim	/^map <up> k$/;"	m
+=#	ftplugin/tex/insert-map.vim	/^inoremap =# include$/;"	m
+=*	ftplugin/tex/insert-map.vim	/^inoremap =* \\item $/;"	m
+=-	ftplugin/tex/insert-map.vim	/^inoremap =- \\hline$/;"	m
+=/	ftplugin/tex/insert-map.vim	/^inoremap =\/ code$/;"	m
+==p	ftplugin/tex/insert-map.vim	/^inoremap ==p picture$/;"	m
+=^	ftplugin/tex/insert-map.vim	/^inoremap =^ header$/;"	m
+=_	ftplugin/tex/insert-map.vim	/^inoremap =_ footer$/;"	m
+=a	ftplugin/tex/insert-map.vim	/^inoremap =a acronym$/;"	m
+=c	ftplugin/tex/insert-map.vim	/^inoremap =c color$/;"	m
+=g	ftplugin/tex/insert-map.vim	/^inoremap =g glossar$/;"	m
+=h	ftplugin/tex/insert-map.vim	/^inoremap =h hyper$/;"	m
+=i	ftplugin/tex/insert-map.vim	/^inoremap =i index$/;"	m
+=m	ftplugin/tex/insert-map.vim	/^inoremap =m minted $/;"	m
+=r	ftplugin/tex/insert-map.vim	/^inoremap =r reference$/;"	m
+=t	ftplugin/tex/insert-map.vim	/^inoremap =t table$/;"	m
 AddMatch	ftplugin/tex/completation.vim	/^function! AddMatch(base) abort$/;"	f
 AddMatch	ftplugin/vim/complete.vim	/^function! AddMatch(base) abort$/;"	f
+Book	ftplugin/tex/command.vim	/^command! Book :call Book()$/;"	c
+Book	ftplugin/tex/command.vim	/^function! Book() abort "{{{$/;"	f
 C_extension	ftplugin/c/abbreviation.vim	/^function! C_extension()$/;"	f
 Cextension	ftplugin/c/command.vim	/^command! Cextension :silent call C_extension() $/;"	c
 CocJson	plugin/third-party/coc.vim	/^augroup CocJson$/;"	a
@@ -158,27 +221,41 @@ CreateNormalLeaderMap	plugin/map/normal.vim	/^function! s:CreateNormalLeaderMap(
 CreateVisualMatchPairMap	plugin/map/visual.vim	/^function! s:CreateVisualMatchPairMap() abort "{{{$/;"	f
 Fold	plugin/third-party/coc.vim	/^command! -nargs=? Fold :call     CocAction('fold', <f-args>)$/;"	c
 Format	plugin/third-party/coc.vim	/^command! -nargs=0 Format :call CocAction('format')$/;"	c
+GLossary	ftplugin/tex/command.vim	/^command! GLossary :call GlossaryTex()$/;"	c
+Glossary	ftplugin/tex/visual-map.vim	/^function! Glossary() abort "{{{$/;"	f
+GlossaryTex	ftplugin/tex/command.vim	/^function! GlossaryTex() abort "{{{$/;"	f
 GrepOperator	plugin/third-party/grepHardWay.vim	/^function! s:GrepOperator(type)$/;"	f
 Hello	plugin/third-party/roxma.vim	/^com -nargs=1 Hello call s:hello.request(<f-args>)$/;"	c
 HelloAsync	plugin/third-party/roxma.vim	/^com HelloAsync call s:hello.notify('greet')$/;"	c
 HelloSync	plugin/third-party/roxma.vim	/^com HelloSync call s:hello.request('greet')$/;"	c
 Help	ftplugin/help/mapping.vim	/^function! s:Help(type) abort$/;"	f
 Hola	ftplugin/sh/abbreviation.vim	/^function! Hola() abort$/;"	f
+Italic	ftplugin/tex/visual-map.vim	/^function! Italic() abort$/;"	f
 K	plugin/third-party/coc.vim	/^nnoremap <silent> K :call <SID>show_documentation()<CR>$/;"	m
 LightlineFilename	plugin/third-party/lightline.vim	/^function! LightlineFilename()$/;"	f
 Link	ftplugin/help/mapping.vim	/^function! Link() abort$/;"	f
+Main	ftplugin/tex/command.vim	/^command! Main :call Main()$/;"	c
+Main	ftplugin/tex/command.vim	/^function! Main() abort "{{{$/;"	f
 MyComplete	plugin/personal-complete.vim	/^fun! MyComplete()$/;"	f
 N	plugin/third-party/highliter.vim	/^nnoremap <silent> N :call WordNavigation('backward')<cr>$/;"	m
 OR	plugin/third-party/coc.vim	/^command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')$/;"	c
 ObtenerComienzoDeLaPalabra	ftplugin/tex/completation.vim	/^function! ObtenerComienzoDeLaPalabra(palabraImcompleta, linea) abort$/;"	f
 ObtenerComienzoDeLaPalabra	ftplugin/vim/complete.vim	/^function! ObtenerComienzoDeLaPalabra(palabraImcompleta, linea) abort$/;"	f
 OmniFunction	plugin/personal-autocommand-insert.vim	/^augroup OmniFunction $/;"	a
-SnippetEdit	plugin/third-party/coc-snippet.vim	/^command SnippetEdit :CocCommand snippets.editSnippets$/;"	c
-SnippetFile	plugin/third-party/coc-snippet.vim	/^command SnippetFile :CocCommand snippets.openSnippetFile$/;"	c
+Package	ftplugin/tex/command.vim	/^command! Package :call PackageTex()$/;"	c
+PackageTex	ftplugin/tex/command.vim	/^function! PackageTex() abort "{{{$/;"	f
+Printer	ftplugin/tex/command.vim	/^command! Printer :call PrinterTex()$/;"	c
+PrinterTex	ftplugin/tex/command.vim	/^function! PrinterTex() abort "{{{$/;"	f
+PutNumber	ftplugin/snippets/personal_snippet.vim	/^function! PutNumber(numero) abort$/;"	f
+Reference	ftplugin/tex/command.vim	/^command! Reference :call ReferenceTex()$/;"	c
+ReferenceTex	ftplugin/tex/command.vim	/^function! ReferenceTex() abort "{{{$/;"	f
+SnippetEdit	plugin/third-party/coc-snippet.vim	/^command! SnippetEdit :CocCommand snippets.editSnippets$/;"	c
+SnippetFile	plugin/third-party/coc-snippet.vim	/^command! SnippetFile :CocCommand snippets.openSnippetFile$/;"	c
 SwitchKeyword	plugin/personal-command.vim	/^command! SwitchKeyword :call SwitchKeyword()$/;"	c
 SwitchMatchPair	plugin/personal-command.vim	/^command! SwitchMatchPair :call SwitchMatchPairMapping()$/;"	c
 Tag	ftplugin/help/mapping.vim	/^function! Tag() abort$/;"	f
 Templates	plugin/template.vim	/^function! Templates(fileName, pattern) "{{{$/;"	f
+TexCommand	ftplugin/tex/visual-map.vim	/^function! TexCommand(command) abort "{{{$/;"	f
 VimInit	plugin/personal-autocommand-insert.vim	/^augroup VimInit$/;"	a
 [g	plugin/third-party/coc.vim	/^nmap <silent> [g <Plug>(coc-diagnostic-prev)$/;"	m
 ]g	plugin/third-party/coc.vim	/^nmap <silent> ]g <Plug>(coc-diagnostic-next)$/;"	m
@@ -189,12 +266,11 @@ denite_filter_my_settings	plugin/third-party/denite.vim	/^function! s:denite_fil
 denite_my_settings	plugin/third-party/denite.vim	/^function! s:denite_my_settings() abort$/;"	f
 filetype_vim	plugin/third-party/folding.vim	/^augroup filetype_vim$/;"	a
 g:auto_save	plugin/third-party/autosave.vim	/^let g:auto_save = 1  " enable AutoSave on Vim startup$/;"	v
-g:coc_snippet_next	plugin/third-party/coc-snippet.vim	/^let g:coc_snippet_next = '<c-j>'$/;"	v
 g:coc_snippet_next	plugin/third-party/coc.vim	/^let g:coc_snippet_next = '<tab>'$/;"	v
 g:coc_snippet_prev	plugin/third-party/coc-snippet.vim	/^let g:coc_snippet_prev = '<s-tab>'$/;"	v
-g:keywordSwitched	autoload/map/normal/switcher.vim	/^let g:keywordSwitched = 1$/;"	v
+g:keywordSwitched	plugin/map/normal.vim	/^let g:keywordSwitched = 1$/;"	v
 g:lightline	plugin/third-party/lightline.vim	/^let g:lightline = {$/;"	v
-g:livepreview_engine	plugin/third-party/vim-latex-live-preview.vim	/^let g:livepreview_engine = 'pdflatex'$/;"	v
+g:livepreview_engine	plugin/third-party/vim-latex-live-preview.vim	/^let g:livepreview_engine = 'xelatex --shell-escape'$/;"	v
 g:livepreview_previewer	plugin/third-party/vim-latex-live-preview.vim	/^let g:livepreview_previewer = 'evince'$/;"	v
 g:multi_cursor_next_key	plugin/third-party/multiple-cursor.vim	/^let g:multi_cursor_next_key            = '<C-n>'$/;"	v
 g:multi_cursor_prev_key	plugin/third-party/multiple-cursor.vim	/^let g:multi_cursor_prev_key            = '<C-p>'$/;"	v
@@ -205,21 +281,21 @@ g:multi_cursor_skip_key	plugin/third-party/multiple-cursor.vim	/^let g:multi_cur
 g:multi_cursor_start_key	plugin/third-party/multiple-cursor.vim	/^let g:multi_cursor_start_key           = 'g<C-n>'$/;"	v
 g:multi_cursor_start_word_key	plugin/third-party/multiple-cursor.vim	/^let g:multi_cursor_start_word_key      = '<C-n>'$/;"	v
 g:multi_cursor_use_default_mapping	plugin/third-party/multiple-cursor.vim	/^let g:multi_cursor_use_default_mapping=0$/;"	v
-g:switchmapped	autoload/map/normal/switcher.vim	/^let g:switchmapped = 1$/;"	v
-g:syntastic_always_populate_loc_list	plugin/third-party/syntactis.vim	/^let g:syntastic_always_populate_loc_list = 1$/;"	v
+g:switchmapped	plugin/map/normal.vim	/^let g:switchmapped = 1$/;"	v
 g:syntastic_always_populate_loc_list	plugin/third-party/syntastic.vim	/^let g:syntastic_always_populate_loc_list = 1$/;"	v
-g:syntastic_auto_loc_list	plugin/third-party/syntactis.vim	/^let g:syntastic_auto_loc_list = 1$/;"	v
 g:syntastic_auto_loc_list	plugin/third-party/syntastic.vim	/^let g:syntastic_auto_loc_list = 1$/;"	v
-g:syntastic_check_on_open	plugin/third-party/syntactis.vim	/^let g:syntastic_check_on_open = 1$/;"	v
 g:syntastic_check_on_open	plugin/third-party/syntastic.vim	/^let g:syntastic_check_on_open = 1$/;"	v
-g:syntastic_check_on_wq	plugin/third-party/syntactis.vim	/^let g:syntastic_check_on_wq = 0$/;"	v
 g:syntastic_check_on_wq	plugin/third-party/syntastic.vim	/^let g:syntastic_check_on_wq = 0$/;"	v
 g:template_path	autoload/template/templator.vim	/^let g:template_path = "~\/.vim\/bundle\/personal-vim\/template\/"$/;"	v
 g:template_path	plugin/template.vim	/^let g:template_path = "~\/.vim\/bundle\/personal-vim\/template\/"$/;"	v
+g:tex_insert_map	ftplugin/tex/insert-map.vim	/^let g:tex_insert_map = 1$/;"	v
+g:tex_normal_map	ftplugin/tex/normal-map.vim	/^let g:tex_normal_map = 1$/;"	v
+g:tex_visual_map	ftplugin/tex/visual-map.vim	/^let g:tex_visual_map = 1$/;"	v
 g:trans_default_direction	plugin/third-party/translate.vim	/^let g:trans_default_direction="en:es"$/;"	v
 g:unite_force_overwrite_statusline	plugin/third-party/lightline.vim	/^let g:unite_force_overwrite_statusline = 0$/;"	v
 g:vimfiler_force_overwrite_statusline	plugin/third-party/lightline.vim	/^let g:vimfiler_force_overwrite_statusline = 0$/;"	v
 g:vimshell_force_overwrite_statusline	plugin/third-party/lightline.vim	/^let g:vimshell_force_overwrite_statusline = 0$/;"	v
+g:vimtex_view_general_viewer	plugin/third-party/vimtex.vim	/^let g:vimtex_view_general_viewer = 'evince'$/;"	v
 g:ycm_auto_trigger	plugin/third-party/youcompletme.vim	/^let g:ycm_auto_trigger = 1$/;"	v
 g:ycm_clangd_args	plugin/third-party/youcompletme.vim	/^let g:ycm_clangd_args = ['-log=verbose', '-pretty']$/;"	v
 g:ycm_clangd_binary_path	plugin/third-party/youcompletme.vim	/^let g:ycm_clangd_binary_path = exepath("clangd")$/;"	v

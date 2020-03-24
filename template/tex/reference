@@ -1,0 +1,23 @@
+\usepackage{hyperref}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=brown,
+	filecolor=magenta,      
+	urlcolor=cyan,
+	pdftitle={Sharelatex Example},
+	bookmarks=true,
+	linktoc=section,
+	anchorcolor=red,
+	citecolor=green,
+	menucolor=yellow,
+	runcolor=filecolor,
+	bookmarksopen=true,
+	pdfhighlight=/I,
+	pdfnewwindow=false,
+	backref=true,
+	menubordercolor={white},
+	pdfcenterwindow=true,
+	pdfborder={orange}
+	linkbordercolor=blue
+}

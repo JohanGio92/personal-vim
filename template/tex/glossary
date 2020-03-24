@@ -1,0 +1,13 @@
+\usepackage[toc, acronym, automake]{glossaries}
+
+\makeglossaries
+
+\begin{comment}
+\newglossaryentry{namereference}{
+		name=namereference,
+		description={write a description}
+}
+
+\newacronym{acronym}{acronym}{description}
+\end{comment}
+

@@ -1,15 +1,3 @@
-"augroup Insert
-    "autocmd!
-    "autocmd InsertLeave * :call OnMatchPairInsertMapping()
-    "autocmd InsertEnter * :call OffMatchPairComandUnMapping("iun")
-"augroup END
-
-"augroup Command
-"    autocmd!
-"    autocmd CmdLineEnter *.[^t][^x][^t] :set iskeyword=33-255
-"    autocmd CmdLineLeave *.[^t][^x][^t] :set iskeyword&
-"augroup END
-
 augroup OmniFunction 
     autocmd!
     autocmd VimEnter *.[ch] :set omnifunc=template#templator#complete
@@ -17,6 +5,19 @@ augroup END
 
 augroup VimInit
     autocmd!
-    autocmd VimEnter,BufReadPost * :normal G
+    autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+    autocmd VimEnter /tmp/* :call <SID>Terminal()
 augroup END
 
+function! s:Terminal() abort
+	set filetype=sh
+	startinsert
+	inoremap <silent> qa <Esc>:q<cr>
+endfunction
+
+augroup Terminal
+	""autocmd!
+	autocmd TermOpen * set nonumber
+	""autocmd TermLeave * set modifiable | set virtualedit+=all
+	""autocmd TermClose * set virtualedit-=all
+augroup END

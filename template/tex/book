@@ -1,0 +1,26 @@
+\color[HTML]{396F5E}
+\setlength{\fboxsep}{10pt}
+
+\newcommand
+	{ \colorsection }[1]
+{ \colorbox{cyan}{ \parbox{\dimexpr\textwidth-2\fboxsep}{ \textbf{\textcolor{white}{#1}}}  } } 
+
+\titleformat{name=\section}[block]
+  {\sffamily\large}
+  {}
+  {0pt}
+  {\colorsection}
+
+\newcommand{\colorsubsection}[1]{ \textcolor{cyan}{\huge\thesubsection~#1}} 
+
+\titleformat{ name=\subsection }[block]
+{\normalfont\sffamily}
+{}
+{0pt}
+{\colorsubsection}
+
+\newcommand{\addtableofcontents}[3][toc]{
+	\cleardoublepage
+	\phantomsection
+	\addcontentsline{#1}{#2}{#3}
+}

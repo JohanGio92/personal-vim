@@ -1,2 +1,4 @@
-setlocal tabstop=8
-setlocal softtabstop=8
+setlocal iskeyword+=-,:
+setlocal tabstop=2
+setlocal softtabstop=2
+setlocal nowrap
