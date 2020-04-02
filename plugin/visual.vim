@@ -232,8 +232,8 @@ vnoremap <localleader><localleader>{ :<C-U>call <SID>VisualBlockPut('{')<cr>
 vnoremap <localleader><localleader>< :<C-U>call <SID>VisualBlockPut('<')<cr>
 vnoremap <localleader><localleader>( :<C-U>call <SID>VisualBlockPut("(")<cr>
 
-noremap <enter> :<C-U>call <SID>VisualRegex()<cr>
-noremap <A-right> :<C-U>call <SID>TransponerHaciaLaDerecha()<cr>
-noremap <A-left> :<C-U>call <SID>TransponerHaciaLaIzquierda()<cr>
-noremap <space>m /<up><cr>
-noremap <space>M ?<up><cr>
+vnoremap <leader><enter> :<C-U>call <SID>VisualRegex()<cr>
+vnoremap <A-right> :<C-U>call <SID>TransponerHaciaLaDerecha()<cr>
+vnoremap <A-left> :<C-U>call <SID>TransponerHaciaLaIzquierda()<cr>
+vnoremap <space>m /<up><cr>N
+vnoremap <space>M ?<up><cr>n

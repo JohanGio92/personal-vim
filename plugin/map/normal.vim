@@ -17,7 +17,7 @@ function! s:CreateNormalLeaderMap() abort "{{{
     nnoremap <Leader>env :tabnew $VIMRC<CR>
     nnoremap <Leader>sv :source $VIMRC<CR>
     nnoremap <Leader>nh :noh<CR>
-    nnoremap <Leader>sh :shell<CR>
+    "nnoremap <Leader>sh :shell<CR>
     nnoremap <Leader>x :x<CR>
     nnoremap <Leader>qa :qall<CR>
     nnoremap <Leader>q :q<CR>
@@ -28,7 +28,7 @@ function! s:CreateNormalLeaderMap() abort "{{{
     nnoremap <Leader><Enter> :NERDTreeToggle<CR>
     nnoremap <Leader><Leader> :
     nnoremap <Leader>fd I"-----------[ NameFolding ]------------{{{<cr><cr>}}}<Esc><up>x
-    nnoremap <Leader>bd :bd!<cr>
+	nnoremap bd :bwipeout!<cr>
 endfunction "}}}
 
 function! s:CreateNormalF1ToF12Map() abort "{{{
@@ -44,11 +44,9 @@ function! s:Tag(tag) abort
 	execute v:count1 . a:tag 
 endfunction
 
-nmap <C-F> /
 nnoremap <space>t :tags<cr>
 nnoremap ]n :<C-U>call <SID>Tag("tag")<cr>
 nnoremap [n :<C-U>call <SID>Tag("pop")<cr>
-nnoremap bd :bwipeout<cr>
 " nnoremap <Enter> a<Enter><Esc>k$
 
 call <SID>CreateNormalEspaciadorMap()

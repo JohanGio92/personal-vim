@@ -15,10 +15,21 @@ tnoremap <C-W>_ <C-\><C-N><C-w>_
 ""nnoremap <A-j> <C-w>j
 ""nnoremap <A-k> <C-w>k
 ""nnoremap <A-l> <C-w>l
-tnoremap ' ''
-tnoremap < <>
-tnoremap [ []
-tnoremap { {}
-tnoremap ( ()
-tnoremap " ""
-""tnoremap dd <C-\><C-N>dd
+tnoremap ' ''<left>
+tnoremap < <><left>
+tnoremap [ []<left>
+tnoremap { {}<left>
+tnoremap ( ()<left>
+tnoremap " ""<left>
+tnoremap <expr> <C-R> '<C-\><C-N>"'. nr2char(getchar()). 'pi'
+
+"clear page
+tnoremap <C-L> <M-l><C-L>
+""reverse search
+tnoremap <C-R> <M-l><M-H><C-R>
+tnoremap <C-K> <M-l><M-H><C-K>
+tnoremap <nowait> <C-W> <M-d>W
+tnoremap <nowait> <C-B> <M-d>B
+tnoremap <C-right> <M-E>
+tnoremap <C-left> <M-B>
+

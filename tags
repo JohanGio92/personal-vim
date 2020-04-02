@@ -9,14 +9,30 @@
 'i	ftplugin/tex/insert-map.vim	/^inoremap 'i \\'{i}$/;"	m
 'o	ftplugin/tex/insert-map.vim	/^inoremap 'o \\'{o}$/;"	m
 'u	ftplugin/tex/insert-map.vim	/^inoremap 'u \\'{u}$/;"	m
-<C-E>	ftplugin/tex/completation.vim	/^inoremap <C-E> <C-R>=CompleteEvent()<cr>$/;"	m
++	plugin/map/tabpage.vim	/^nnoremap + :<C-U>call <SID>MoverPestagna('+')<cr><ESC>$/;"	m
+++	plugin/visual.vim	/^vnoremap ++ :<C-U>call <SID>VisualBlockExpandir()<cr>$/;"	m
+-	plugin/map/tabpage.vim	/^nnoremap - :<C-U>call <SID>MoverPestagna('-')<cr><ESC>$/;"	m
+--	plugin/visual.vim	/^vnoremap -- :<C-U>call <SID>VisualBlockReducir()<cr>$/;"	m
+<A-down>	plugin/personal-abbreviation.vim	/^nnoremap <A-down> :<C-U>call SwapLine('+')<cr>$/;"	m
+<A-down>	plugin/personal-abbreviation.vim	/^vnoremap <A-down> :<C-U>call SwapLines('+')<cr>$/;"	m
+<A-left>	plugin/visual.vim	/^vnoremap <A-left> :<C-U>call <SID>TransponerHaciaLaIzquierda()<cr>$/;"	m
+<A-right>	plugin/visual.vim	/^vnoremap <A-right> :<C-U>call <SID>TransponerHaciaLaDerecha()<cr>$/;"	m
+<A-up>	plugin/personal-abbreviation.vim	/^nnoremap <A-up> :<C-U>call SwapLine('-')<cr>$/;"	m
+<A-up>	plugin/personal-abbreviation.vim	/^vnoremap <A-up> :<C-U>call SwapLines('-')<cr>$/;"	m
+<C-B>	plugin/third-party/coc-snippet.vim	/^nnoremap <C-B> <Plug>(coc-range-select)$/;"	m
+<C-B>	plugin/third-party/coc-snippet.vim	/^vnoremap <C-B> <Plug>(coc-range-select) $/;"	m
 <C-E>	ftplugin/vim/complete.vim	/^inoremap <C-E> <C-R>=CompleteEvent()<cr>$/;"	m
-<C-F>	plugin/map/normal.vim	/^nmap <C-F> \/$/;"	m
+<C-E>	plugin/template.vim	/^inoremap <C-E> <C-R>=CompleteEvent(g:especialcharacter)<cr>$/;"	m
+<C-W>	plugin/template.vim	/^inoremap <C-W> <C-R>=CompleteEvent(g:pattern)<cr>$/;"	m
+<C-W><down>	plugin/map/terminal.vim	/^inoremap <C-W><down> <C-\\><C-N><C-w>j$/;"	m
+<C-W><left>	plugin/map/terminal.vim	/^inoremap <C-W><left> <C-\\><C-N><C-w>h$/;"	m
+<C-W><right>	plugin/map/terminal.vim	/^inoremap <C-W><right> <C-\\><C-N><C-w>l$/;"	m
+<C-W><up>	plugin/map/terminal.vim	/^inoremap <C-W><up> <C-\\><C-N><C-w>k$/;"	m
 <C-d>	plugin/map/insert.vim	/^inoremap <C-d> <C-x><C-k>$/;"	m
 <C-f>	plugin/map/insert.vim	/^inoremap <C-f> <C-x><C-f>$/;"	m
+<C-k>	plugin/third-party/coc-snippet.vim	/^vmap <C-k> <Plug>(coc-snippets-select)$/;"	m
 <C-l>	plugin/map/insert.vim	/^inoremap <C-l> <C-x><C-l>$/;"	m
 <C-m>	plugin/personal-complete.vim	/^inoremap <expr> <C-m> pumvisible() ?  "\\<C-n>" : "\\<C-m>"$/;"	m
-<C-o>	plugin/map/insert.vim	/^inoremap <C-o> <C-x><C-o>$/;"	m
 <C-t>	plugin/map/insert.vim	/^inoremap <C-t> <C-x><C-t>$/;"	m
 <C-t>	plugin/personal-complete.vim	/^inoremap <C-t> <C-r>=MyComplete()<CR>$/;"	m
 <C-u>	plugin/map/insert.vim	/^inoremap <C-u> <C-x><C-u>$/;"	m
@@ -24,7 +40,6 @@
 <F2>	plugin/third-party/color-vimrc.vim	/^inoremap <F2> <Esc>:VCoolor<CR>$/;"	m
 <F2>	plugin/third-party/color-vimrc.vim	/^nnoremap <F2> :VCoolor<CR>$/;"	m
 <F5>	plugin/third-party/youcompletme.vim	/^nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>$/;"	m
-<F8>	plugin/third-party/tagBar.vim	/^nmap <F8> :TagbarToggle<CR>$/;"	m
 <S-TAB>	plugin/third-party/coc.vim	/^inoremap <expr><S-TAB> pumvisible() ? "\\<C-p>" : "\\<C-h>"$/;"	m
 <TAB>	plugin/third-party/coc.vim	/^inoremap <silent><expr> <TAB>$/;"	m
 <TAB>	plugin/third-party/coc.vim	/^nmap <silent> <TAB> <Plug>(coc-range-select)$/;"	m
@@ -32,70 +47,15 @@
 <cr>	plugin/third-party/coc.vim	/^inoremap <expr> <cr> pumvisible() ? "\\<C-y>" : "\\<C-g>u\\<CR>"$/;"	m
 <down>	plugin/map/normal.vim	/^map <down> j$/;"	m
 <leader><	plugin/personal-control-mapping.vim	/^cnoremap <leader>< <lt ><left><bs><right>$/;"	m
-<leader><C-a>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-a> <C-a ><left><bs><right>    $/;"	m
-<leader><C-b>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-b> <C-b ><left><bs><right>$/;"	m
-<leader><C-c>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-c> <C-c ><left><bs><right>$/;"	m
-<leader><C-d>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-d> <C-d ><left><bs><right>$/;"	m
-<leader><C-down>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-down> <C-down ><left><bs><right>$/;"	m
-<leader><C-e>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-e> <C-e ><left><bs><right>$/;"	m
-<leader><C-f>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-f> <C-f ><left><bs><right>$/;"	m
-<leader><C-g>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-g> <C-g ><left><bs><right>$/;"	m
-<leader><C-h>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-h> <C-h ><left><bs><right>$/;"	m
-<leader><C-i>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-i> <C-i ><left><bs><right>$/;"	m
-<leader><C-j>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-j> <C-j ><left><bs><right>$/;"	m
-<leader><C-k>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-k> <C-k ><left><bs><right>$/;"	m
-<leader><C-l>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-l> <C-l ><left><bs><right>$/;"	m
-<leader><C-left>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-left> <C-left ><left><bs><right>$/;"	m
-<leader><C-m>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-m> <C-m ><left><bs><right>$/;"	m
-<leader><C-n>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-n> <C-n ><left><bs><right>$/;"	m
-<leader><C-o>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-o> <C-o ><left><bs><right>$/;"	m
-<leader><C-p>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-p> <C-p ><left><bs><right>$/;"	m
-<leader><C-q>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-q> <C-q ><left><bs><right>$/;"	m
-<leader><C-r>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-r> <C-r ><left><bs><right>$/;"	m
-<leader><C-right>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-right> <C-right ><left><bs><right>$/;"	m
-<leader><C-s>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-s> <C-s ><left><bs><right>$/;"	m
-<leader><C-t>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-t> <C-t ><left><bs><right>$/;"	m
-<leader><C-u>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-u> <C-u ><left><bs><right>$/;"	m
-<leader><C-up>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-up> <C-up ><left><bs><right>$/;"	m
-<leader><C-v>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-v> <C-v ><left><bs><right>$/;"	m
-<leader><C-w>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-w> <C-w ><left><bs><right>$/;"	m
-<leader><C-x>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-x> <C-x ><left><bs><right>$/;"	m
-<leader><C-y>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-y> <C-y ><left><bs><right>$/;"	m
-<leader><C-z>	plugin/personal-control-mapping.vim	/^cnoremap <leader><C-z> <C-z ><left><bs><right>$/;"	m
-<leader><S-a>	plugin/personal-control-mapping.vim	/^cnoremap <leader><S-a> <S-a ><left><bs><right>    $/;"	m
-<leader><S-b>	plugin/personal-control-mapping.vim	/^cnoremap <leader><S-b> <S-b ><left><bs><right>$/;"	m
-<leader><S-c>	plugin/personal-control-mapping.vim	/^cnoremap <leader><S-c> <S-c ><left><bs><right>$/;"	m
-<leader><S-d>	plugin/personal-control-mapping.vim	/^cnoremap <leader><S-d> <S-d ><left><bs><right>$/;"	m
-<leader><S-e>	plugin/personal-control-mapping.vim	/^cnoremap <leader><S-e> <S-e ><left><bs><right>$/;"	m
-<leader><S-f>	plugin/personal-control-mapping.vim	/^cnoremap <leader><S-f> <S-f ><left><bs><right>$/;"	m
-<leader><S-g>	plugin/personal-control-mapping.vim	/^cnoremap <leader><S-g> <S-g ><left><bs><right>$/;"	m
-<leader><S-h>	plugin/personal-control-mapping.vim	/^cnoremap <leader><S-h> <S-h ><left><bs><right>$/;"	m
-<leader><S-i>	plugin/personal-control-mapping.vim	/^cnoremap <leader><S-i> <S-i ><left><bs><right>$/;"	m
-<leader><S-j>	plugin/personal-control-mapping.vim	/^cnoremap <leader><S-j> <S-j ><left><bs><right>$/;"	m
-<leader><S-k>	plugin/personal-control-mapping.vim	/^cnoremap <leader><S-k> <S-k ><left><bs><right>$/;"	m
-<leader><S-l>	plugin/personal-control-mapping.vim	/^cnoremap <leader><S-l> <S-l ><left><bs><right>$/;"	m
-<leader><S-m>	plugin/personal-control-mapping.vim	/^cnoremap <leader><S-m> <S-m ><left><bs><right>$/;"	m
-<leader><S-n>	plugin/personal-control-mapping.vim	/^cnoremap <leader><S-n> <S-n ><left><bs><right>$/;"	m
-<leader><S-o>	plugin/personal-control-mapping.vim	/^cnoremap <leader><S-o> <S-o ><left><bs><right>$/;"	m
-<leader><S-p>	plugin/personal-control-mapping.vim	/^cnoremap <leader><S-p> <S-p ><left><bs><right>$/;"	m
-<leader><S-q>	plugin/personal-control-mapping.vim	/^cnoremap <leader><S-q> <S-q ><left><bs><right>$/;"	m
-<leader><S-r>	plugin/personal-control-mapping.vim	/^cnoremap <leader><S-r> <S-r ><left><bs><right>$/;"	m
-<leader><S-s>	plugin/personal-control-mapping.vim	/^cnoremap <leader><S-s> <S-s ><left><bs><right>$/;"	m
-<leader><S-t>	plugin/personal-control-mapping.vim	/^cnoremap <leader><S-t> <S-t ><left><bs><right>$/;"	m
-<leader><S-u>	plugin/personal-control-mapping.vim	/^cnoremap <leader><S-u> <S-u ><left><bs><right>$/;"	m
-<leader><S-v>	plugin/personal-control-mapping.vim	/^cnoremap <leader><S-v> <S-v ><left><bs><right>$/;"	m
-<leader><S-w>	plugin/personal-control-mapping.vim	/^cnoremap <leader><S-w> <S-w ><left><bs><right>$/;"	m
-<leader><S-x>	plugin/personal-control-mapping.vim	/^cnoremap <leader><S-x> <S-x ><left><bs><right>$/;"	m
-<leader><S-y>	plugin/personal-control-mapping.vim	/^cnoremap <leader><S-y> <S-y ><left><bs><right>$/;"	m
-<leader><S-z>	plugin/personal-control-mapping.vim	/^cnoremap <leader><S-z> <S-z ><left><bs><right>$/;"	m
-<leader><leader><down>	plugin/personal-control-mapping.vim	/^cnoremap <leader><leader><down> <down ><left><bs><right>$/;"	m
-<leader><leader><left>	plugin/personal-control-mapping.vim	/^cnoremap <leader><leader><left> <left ><left><bs><right>$/;"	m
-<leader><leader><right>	plugin/personal-control-mapping.vim	/^cnoremap <leader><leader><right> <right ><left><bs><right>$/;"	m
-<leader><leader><up>	plugin/personal-control-mapping.vim	/^cnoremap <leader><leader><up> <up ><left><bs><right>$/;"	m
-<leader><s-down>	plugin/personal-control-mapping.vim	/^cnoremap <leader><s-down> <s-down ><left><bs><right>$/;"	m
-<leader><s-left>	plugin/personal-control-mapping.vim	/^cnoremap <leader><s-left> <s-left ><left><bs><right>$/;"	m
-<leader><s-right>	plugin/personal-control-mapping.vim	/^cnoremap <leader><s-right> <s-right ><left><bs><right>$/;"	m
-<leader><s-up>	plugin/personal-control-mapping.vim	/^cnoremap <leader><s-up> <s-up ><left><bs><right>$/;"	m
+<leader><C-a>	plugin/personal-abbreviation.vim	/^vnoremap <leader><C-a> :<C-U>call Consecutivas()<cr>$/;"	m
+<leader><C-w>	plugin/personal-abbreviation.vim	/^vnoremap <leader><C-w> :<C-U>call Consecutiva()<cr>$/;"	m
+<leader><enter>	plugin/visual.vim	/^vnoremap <leader><enter> :<C-U>call <SID>VisualRegex()<cr>$/;"	m
+<leader><leader>"	plugin/visual.vim	/^vnoremap <leader><leader>" :<C-U>call <SID>VisualPut('"')<cr>$/;"	m
+<leader><leader>'	plugin/visual.vim	/^vnoremap <leader><leader>' :<C-U>call <SID>VisualPut("'")<cr>$/;"	m
+<leader><leader>(	plugin/visual.vim	/^vnoremap <leader><leader>( :<C-U>call <SID>VisualPut("(")<cr>$/;"	m
+<leader><leader><	plugin/visual.vim	/^vnoremap <leader><leader>< :<C-U>call <SID>VisualPut("<")<cr>$/;"	m
+<leader><leader>[	plugin/visual.vim	/^vnoremap <leader><leader>[ :<C-U>call <SID>VisualPut("[")<cr>$/;"	m
+<leader><leader>{	plugin/visual.vim	/^vnoremap <leader><leader>{ :<C-U>call <SID>VisualPut("{")<cr>$/;"	m
 <leader>\|	plugin/personal-control-mapping.vim	/^cnoremap <leader>\\| <Bar ><left><bs><right>$/;"	m
 <leader>a	plugin/third-party/coc.vim	/^nmap <leader>a  <Plug>(coc-codeaction-selected)$/;"	m
 <leader>ac	plugin/third-party/coc.vim	/^nmap <leader>ac  <Plug>(coc-codeaction)$/;"	m
@@ -108,44 +68,25 @@
 <leader>h	plugin/third-party/highliter.vim	/^nnoremap <silent> <leader>h :call InterestingWords('n')<cr>$/;"	m
 <leader>h	plugin/third-party/highliter.vim	/^nnoremap <silent> <leader>h :call UncolorAllWords()<cr>$/;"	m
 <leader>ln	ftplugin/help/mapping.vim	/^nnoremap <buffer> <leader>ln :call Link<C-V>()<cr> $/;"	m
+<leader>o	plugin/third-party/tagBar.vim	/^nmap <leader>o :TagbarToggle<CR>$/;"	m
 <leader>qf	plugin/third-party/coc.vim	/^nmap <leader>qf  <Plug>(coc-fix-current)$/;"	m
 <leader>rf	plugin/third-party/coc.vim	/^nmap <leader>rf <Plug>(coc-rename)$/;"	m
 <leader>rn	plugin/third-party/coc.vim	/^nmap <leader>rn <Plug>(coc-rename)$/;"	m
 <leader>tg	ftplugin/help/mapping.vim	/^nnoremap <buffer> <leader>tg :call Tag<C-V>()<cr> $/;"	m
 <leader>tr	plugin/third-party/translate.vim	/^nnoremap <silent> <leader>tr :Trans -brief<CR>$/;"	m
 <leader>tr	plugin/third-party/translate.vim	/^vnoremap <silent> <leader>tr :Trans -brief<CR>$/;"	m
+<leader>u	plugin/third-party/gundo.vim	/^nnoremap <leader>u :GundoToggle<CR>$/;"	m
 <left>	plugin/map/normal.vim	/^map <left> h$/;"	m
 <localleader>"	ftplugin/tex/insert-map.vim	/^inoremap <localleader>" ``''<left><left>$/;"	m
 <localleader>'	ftplugin/tex/insert-map.vim	/^inoremap <localleader>' `'<left>$/;"	m
-<localleader>1	ftplugin/snippets/personal_snippet.vim	/^inoremap <localleader>1 ${1:}<left>$/;"	m
-<localleader>1	ftplugin/snippets/personal_snippet.vim	/^nnoremap <localleader>1 i${1:}<left>$/;"	m
-<localleader>1	ftplugin/snippets/personal_snippet.vim	/^vnoremap <localleader>1 :<C-U>call PutNumber('1:')<cr>$/;"	m
-<localleader>2	ftplugin/snippets/personal_snippet.vim	/^inoremap <localleader>2 ${2:}<left>$/;"	m
-<localleader>2	ftplugin/snippets/personal_snippet.vim	/^nnoremap <localleader>2 i${2:}<left>$/;"	m
-<localleader>2	ftplugin/snippets/personal_snippet.vim	/^vnoremap <localleader>2 :<C-U>call PutNumber('2:')<cr>$/;"	m
-<localleader>3	ftplugin/snippets/personal_snippet.vim	/^inoremap <localleader>3 ${3:}<left>$/;"	m
-<localleader>3	ftplugin/snippets/personal_snippet.vim	/^nnoremap <localleader>3 i${3:}<left>$/;"	m
-<localleader>3	ftplugin/snippets/personal_snippet.vim	/^vnoremap <localleader>3 :<C-U>call PutNumber('3:')<cr>$/;"	m
-<localleader>4	ftplugin/snippets/personal_snippet.vim	/^inoremap <localleader>4 ${4:}<left>$/;"	m
-<localleader>4	ftplugin/snippets/personal_snippet.vim	/^nnoremap <localleader>4 i${4:}<left>$/;"	m
-<localleader>4	ftplugin/snippets/personal_snippet.vim	/^vnoremap <localleader>4 :<C-U>call PutNumber('4:')<cr>$/;"	m
-<localleader>5	ftplugin/snippets/personal_snippet.vim	/^inoremap <localleader>5 ${5:}<left>$/;"	m
-<localleader>5	ftplugin/snippets/personal_snippet.vim	/^nnoremap <localleader>5 i${5:}<left>$/;"	m
-<localleader>5	ftplugin/snippets/personal_snippet.vim	/^vnoremap <localleader>5 :<C-U>call PutNumber('5:')<cr>$/;"	m
-<localleader>6	ftplugin/snippets/personal_snippet.vim	/^inoremap <localleader>6 ${6:}<left>$/;"	m
-<localleader>6	ftplugin/snippets/personal_snippet.vim	/^nnoremap <localleader>6 i${6:}<left>$/;"	m
-<localleader>6	ftplugin/snippets/personal_snippet.vim	/^vnoremap <localleader>6 :<C-U>call PutNumber('6:')<cr>$/;"	m
-<localleader>7	ftplugin/snippets/personal_snippet.vim	/^inoremap <localleader>7 ${7:}<left>$/;"	m
-<localleader>7	ftplugin/snippets/personal_snippet.vim	/^nnoremap <localleader>7 i${7:}<left>$/;"	m
-<localleader>7	ftplugin/snippets/personal_snippet.vim	/^vnoremap <localleader>7 :<C-U>call PutNumber('7:')<cr>$/;"	m
-<localleader>8	ftplugin/snippets/personal_snippet.vim	/^inoremap <localleader>8 ${8:}<left>$/;"	m
-<localleader>8	ftplugin/snippets/personal_snippet.vim	/^nnoremap <localleader>8 i${8:}<left>$/;"	m
-<localleader>8	ftplugin/snippets/personal_snippet.vim	/^vnoremap <localleader>8 :<C-U>call PutNumber('8:')<cr>$/;"	m
-<localleader>9	ftplugin/snippets/personal_snippet.vim	/^inoremap <localleader>9 ${9:}<left>$/;"	m
-<localleader>9	ftplugin/snippets/personal_snippet.vim	/^nnoremap <localleader>9 i${9:}<left>$/;"	m
-<localleader>9	ftplugin/snippets/personal_snippet.vim	/^vnoremap <localleader>9 :<C-U>call PutNumber('9:')<cr>$/;"	m
 <localleader><down>	ftplugin/tex/insert-map.vim	/^inoremap <localleader><down> \\centering$/;"	m
 <localleader><left>	ftplugin/tex/insert-map.vim	/^inoremap <localleader><left> \\raggedleft$/;"	m
+<localleader><localleader>"	plugin/visual.vim	/^vnoremap <localleader><localleader>" :<C-U>call <SID>VisualBlockPut('"')<cr>$/;"	m
+<localleader><localleader>'	plugin/visual.vim	/^vnoremap <localleader><localleader>' :<C-U>call <SID>VisualBlockPut("'")<cr>$/;"	m
+<localleader><localleader>(	plugin/visual.vim	/^vnoremap <localleader><localleader>( :<C-U>call <SID>VisualBlockPut("(")<cr>$/;"	m
+<localleader><localleader><	plugin/visual.vim	/^vnoremap <localleader><localleader>< :<C-U>call <SID>VisualBlockPut('<')<cr>$/;"	m
+<localleader><localleader>[	plugin/visual.vim	/^vnoremap <localleader><localleader>[ :<C-U>call <SID>VisualBlockPut('[')<cr>$/;"	m
+<localleader><localleader>{	plugin/visual.vim	/^vnoremap <localleader><localleader>{ :<C-U>call <SID>VisualBlockPut('{')<cr>$/;"	m
 <localleader><right>	ftplugin/tex/insert-map.vim	/^inoremap <localleader><right> \\raggedright$/;"	m
 <localleader>=	ftplugin/tex/normal-map.vim	/^nnoremap <localleader>= :VimtexDocPackage $/;"	m
 <localleader>Gl	ftplugin/tex/visual-map.vim	/^vnoremap <localleader>Gl :<C-U>call TexCommand('\\Gls')<cr>$/;"	m
@@ -171,6 +112,7 @@
 <localleader>rf	ftplugin/tex/normal-map.vim	/^nnoremap <localleader>rf ireference$/;"	m
 <localleader>tb	ftplugin/tex/normal-map.vim	/^nnoremap <localleader>tb itable$/;"	m
 <right>	plugin/map/normal.vim	/^map <right> l$/;"	m
+<space>M	plugin/visual.vim	/^vnoremap <space>M ?<up><cr>n$/;"	m
 <space>b	plugin/third-party/denite.vim	/^nnoremap <space>b :Denite buffer -winheight=10<cr>$/;"	m
 <space>c	plugin/third-party/coc.vim	/^nnoremap <silent> <space>c  :<C-u>CocList commands<cr>$/;"	m
 <space>cs	plugin/third-party/denite.vim	/^nnoremap <space>cs :Denite colorscheme -split=vertical -winwidth=15<cr>$/;"	m
@@ -180,6 +122,7 @@
 <space>ft	plugin/third-party/denite.vim	/^nnoremap <space>ft :Denite file -split=tab -winheight=10<cr>$/;"	m
 <space>fv	plugin/third-party/denite.vim	/^nnoremap <space>fv :Denite file\/rec -split=vertical<cr> <Bar> 25<C-W>< $/;"	m
 <space>l	plugin/third-party/denite.vim	/^nnoremap <space>l :Denite line -auto-resume -winheight=10<cr>¬$/;"	m
+<space>m	plugin/visual.vim	/^vnoremap <space>m \/<up><cr>N$/;"	m
 <space>n	plugin/third-party/coc.vim	/^nnoremap <silent> <space>n  :<C-u>CocNext<CR>$/;"	m
 <space>o	plugin/third-party/coc.vim	/^nnoremap <silent> <space>o  :<C-u>CocList outline<cr>$/;"	m
 <space>p	plugin/third-party/coc.vim	/^nnoremap <silent> <space>p  :<C-u>CocPrev<CR>$/;"	m
@@ -187,6 +130,7 @@
 <space>rh	plugin/third-party/denite.vim	/^nnoremap <space>rh :Denite file\/rec -split=horizontal -winheight=10<cr>¬$/;"	m
 <space>rv	plugin/third-party/denite.vim	/^nnoremap <space>rv :Denite file\/rec -split=vertical -winwidth=25<cr> $/;"	m
 <space>s	plugin/third-party/coc.vim	/^nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>$/;"	m
+<space>t	plugin/map/normal.vim	/^nnoremap <space>t :tags<cr>$/;"	m
 <up>	plugin/map/normal.vim	/^map <up> k$/;"	m
 =#	ftplugin/tex/insert-map.vim	/^inoremap =# include$/;"	m
 =*	ftplugin/tex/insert-map.vim	/^inoremap =* \\item $/;"	m
@@ -203,22 +147,24 @@
 =m	ftplugin/tex/insert-map.vim	/^inoremap =m minted $/;"	m
 =r	ftplugin/tex/insert-map.vim	/^inoremap =r reference$/;"	m
 =t	ftplugin/tex/insert-map.vim	/^inoremap =t table$/;"	m
-AddMatch	ftplugin/tex/completation.vim	/^function! AddMatch(base) abort$/;"	f
 AddMatch	ftplugin/vim/complete.vim	/^function! AddMatch(base) abort$/;"	f
+AddMatch	plugin/template.vim	/^function! AddMatch(base, palabraCompleta) abort$/;"	f
 Book	ftplugin/tex/command.vim	/^command! Book :call Book()$/;"	c
 Book	ftplugin/tex/command.vim	/^function! Book() abort "{{{$/;"	f
-C_extension	ftplugin/c/abbreviation.vim	/^function! C_extension()$/;"	f
-Cextension	ftplugin/c/command.vim	/^command! Cextension :silent call C_extension() $/;"	c
 CocJson	plugin/third-party/coc.vim	/^augroup CocJson$/;"	a
-CompleteEvent	ftplugin/tex/completation.vim	/^function! CompleteEvent() abort$/;"	f
+CommanMapKeys	plugin/personal-control-mapping.vim	/^function! s:CommanMapKeys(Functional, arrows) abort$/;"	f
+CommandMapKey	plugin/personal-control-mapping.vim	/^function! s:CommandMapKey(leader, combination, key) abort$/;"	f
 CompleteEvent	ftplugin/vim/complete.vim	/^function! CompleteEvent() abort$/;"	f
-CompleteFA	ftplugin/css/completation.vim	/^function! CompleteFA(findstart, base)$/;"	f
-CompleteFyleType	plugin/template.vim	/^function! CompleteFyleType(findstart, base) abort "{{{$/;"	f
+CompleteEvent	plugin/template.vim	/^function! CompleteEvent(palabraCompleta) abort$/;"	f
+Consecutiva	plugin/personal-abbreviation.vim	/^function! Consecutiva() abort$/;"	f
+Consecutivas	plugin/personal-abbreviation.vim	/^function! Consecutivas() abort$/;"	f
 CreateNormalEspaciadorMap	plugin/map/normal.vim	/^function! s:CreateNormalEspaciadorMap() abort "{{{$/;"	f
 CreateNormalF1ToF12Map	plugin/map/normal.vim	/^function! s:CreateNormalF1ToF12Map() abort "{{{$/;"	f
 CreateNormalFoldingMap	plugin/map/normal.vim	/^function! s:CreateNormalFoldingMap() abort "{{{$/;"	f
 CreateNormalLeaderMap	plugin/map/normal.vim	/^function! s:CreateNormalLeaderMap() abort "{{{$/;"	f
-CreateVisualMatchPairMap	plugin/map/visual.vim	/^function! s:CreateVisualMatchPairMap() abort "{{{$/;"	f
+CreateVisualMatchPairMap	plugin/visualMap.vim	/^function! s:CreateVisualMatchPairMap() abort "{{{$/;"	f
+Dictionary	plugin/personal-command.vim	/^command! -complete=customlist,<SID>SetDictionary -nargs=1 Dictionary :let &dictionary = "\/usr\/share\/dict\/" . <q-args>$/;"	c
+EnterTerminal	plugin/personal-autocommand-insert.vim	/^function! s:EnterTerminal() abort$/;"	f
 Fold	plugin/third-party/coc.vim	/^command! -nargs=? Fold :call     CocAction('fold', <f-args>)$/;"	c
 Format	plugin/third-party/coc.vim	/^command! -nargs=0 Format :call CocAction('format')$/;"	c
 GLossary	ftplugin/tex/command.vim	/^command! GLossary :call GlossaryTex()$/;"	c
@@ -229,49 +175,86 @@ Hello	plugin/third-party/roxma.vim	/^com -nargs=1 Hello call s:hello.request(<f-
 HelloAsync	plugin/third-party/roxma.vim	/^com HelloAsync call s:hello.notify('greet')$/;"	c
 HelloSync	plugin/third-party/roxma.vim	/^com HelloSync call s:hello.request('greet')$/;"	c
 Help	ftplugin/help/mapping.vim	/^function! s:Help(type) abort$/;"	f
-Hola	ftplugin/sh/abbreviation.vim	/^function! Hola() abort$/;"	f
+IrPestagna	plugin/map/tabpage.vim	/^function s:IrPestagna() abort$/;"	f
 Italic	ftplugin/tex/visual-map.vim	/^function! Italic() abort$/;"	f
 K	plugin/third-party/coc.vim	/^nnoremap <silent> K :call <SID>show_documentation()<CR>$/;"	m
+LeaveTerminal	plugin/personal-autocommand-insert.vim	/^function! s:LeaveTerminal() abort$/;"	f
 LightlineFilename	plugin/third-party/lightline.vim	/^function! LightlineFilename()$/;"	f
 Link	ftplugin/help/mapping.vim	/^function! Link() abort$/;"	f
+Ls	plugin/personal-command.vim	/^command -nargs=* -complete=customlist,MakeCommandCompletion Ls !ls <args>$/;"	c
 Main	ftplugin/tex/command.vim	/^command! Main :call Main()$/;"	c
 Main	ftplugin/tex/command.vim	/^function! Main() abort "{{{$/;"	f
+Make	plugin/personal-command.vim	/^command -nargs=* -complete=customlist,MakeCommandCompletion Make make <args>$/;"	c
+MakeCommandCompletion	plugin/personal-command.vim	/^function! MakeCommandCompletion(ArgLead, CmdLine, CursorPos) abort$/;"	f
+MoveVisualMark	plugin/personal-abbreviation.vim	/^function! MoveVisualMark(mark, sign) abort$/;"	f
+MoverPestagna	plugin/map/tabpage.vim	/^function! s:MoverPestagna(signo) abort$/;"	f
 MyComplete	plugin/personal-complete.vim	/^fun! MyComplete()$/;"	f
+MyGutentagsStatusLineRefresher	plugin/third-party/gutentags.vim	/^augroup MyGutentagsStatusLineRefresher$/;"	a
 N	plugin/third-party/highliter.vim	/^nnoremap <silent> N :call WordNavigation('backward')<cr>$/;"	m
 OR	plugin/third-party/coc.vim	/^command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')$/;"	c
-ObtenerComienzoDeLaPalabra	ftplugin/tex/completation.vim	/^function! ObtenerComienzoDeLaPalabra(palabraImcompleta, linea) abort$/;"	f
 ObtenerComienzoDeLaPalabra	ftplugin/vim/complete.vim	/^function! ObtenerComienzoDeLaPalabra(palabraImcompleta, linea) abort$/;"	f
+ObtenerComienzoDeLaPalabra	plugin/template.vim	/^function! ObtenerComienzoDeLaPalabra(palabraImcompleta, linea) abort$/;"	f
 OmniFunction	plugin/personal-autocommand-insert.vim	/^augroup OmniFunction $/;"	a
+OpenTerminal	plugin/personal-autocommand-insert.vim	/^function! s:OpenTerminal() abort$/;"	f
 Package	ftplugin/tex/command.vim	/^command! Package :call PackageTex()$/;"	c
 PackageTex	ftplugin/tex/command.vim	/^function! PackageTex() abort "{{{$/;"	f
 Printer	ftplugin/tex/command.vim	/^command! Printer :call PrinterTex()$/;"	c
 PrinterTex	ftplugin/tex/command.vim	/^function! PrinterTex() abort "{{{$/;"	f
 PutNumber	ftplugin/snippets/personal_snippet.vim	/^function! PutNumber(numero) abort$/;"	f
+Q	plugin/map/tabpage.vim	/^nnoremap Q q$/;"	m
 Reference	ftplugin/tex/command.vim	/^command! Reference :call ReferenceTex()$/;"	c
 ReferenceTex	ftplugin/tex/command.vim	/^function! ReferenceTex() abort "{{{$/;"	f
+RightMap	ftplugin/snippets/personal_snippet.vim	/^function! RightMap(mode, number, key) abort "{{{$/;"	f
+STerminal	plugin/personal-command.vim	/^command STerminal :8split term:\/\/bash$/;"	c
+SetDictionary	plugin/personal-command.vim	/^function! s:SetDictionary(ArgLead, CmdLine, CursorPos) abort$/;"	f
 SnippetEdit	plugin/third-party/coc-snippet.vim	/^command! SnippetEdit :CocCommand snippets.editSnippets$/;"	c
 SnippetFile	plugin/third-party/coc-snippet.vim	/^command! SnippetFile :CocCommand snippets.openSnippetFile$/;"	c
+SnippetMap	ftplugin/snippets/personal_snippet.vim	/^function! SnippetMap(mode, key) abort "{{{$/;"	f
+SwapLine	plugin/personal-abbreviation.vim	/^function! SwapLine(sign) abort $/;"	f
+SwapLines	plugin/personal-abbreviation.vim	/^function! SwapLines(sign) abort $/;"	f
+SwapVisualLines	plugin/personal-abbreviation.vim	/^function! SwapVisualLines(sign) abort$/;"	f
 SwitchKeyword	plugin/personal-command.vim	/^command! SwitchKeyword :call SwitchKeyword()$/;"	c
 SwitchMatchPair	plugin/personal-command.vim	/^command! SwitchMatchPair :call SwitchMatchPairMapping()$/;"	c
+TTerminal	plugin/personal-command.vim	/^command TTerminal :split term:\/\/bash | execute "normal! \\<C-W>T"$/;"	c
 Tag	ftplugin/help/mapping.vim	/^function! Tag() abort$/;"	f
-Templates	plugin/template.vim	/^function! Templates(fileName, pattern) "{{{$/;"	f
+Tag	plugin/map/normal.vim	/^function! s:Tag(tag) abort$/;"	f
+Terminal	plugin/personal-autocommand-insert.vim	/^	augroup Terminal$/;"	a
+Terminal	plugin/personal-autocommand-insert.vim	/^function! s:Terminal() abort$/;"	f
 TexCommand	ftplugin/tex/visual-map.vim	/^function! TexCommand(command) abort "{{{$/;"	f
+TransponerHaciaLaDerecha	plugin/visual.vim	/^function! s:TransponerHaciaLaDerecha() abort$/;"	f
+TransponerHaciaLaIzquierda	plugin/visual.vim	/^function! s:TransponerHaciaLaIzquierda() abort$/;"	f
+VTerminal	plugin/personal-command.vim	/^command VTerminal :vsplit term:\/\/bash$/;"	c
 VimInit	plugin/personal-autocommand-insert.vim	/^augroup VimInit$/;"	a
+VisualBlockExpandir	plugin/visual.vim	/^function! s:VisualBlockExpandir() abort$/;"	f
+VisualBlockPut	plugin/visual.vim	/^function! s:VisualBlockPut(matchpair) abort $/;"	f
+VisualBlockReducir	plugin/visual.vim	/^function! s:VisualBlockReducir() abort$/;"	f
+VisualPut	plugin/visual.vim	/^function! s:VisualPut(matchpair) abort "{{{$/;"	f
+VisualRegex	plugin/visual.vim	/^function! s:VisualRegex() abort$/;"	f
 [g	plugin/third-party/coc.vim	/^nmap <silent> [g <Plug>(coc-diagnostic-prev)$/;"	m
+[n	plugin/map/normal.vim	/^nnoremap [n :<C-U>call <SID>Tag("pop")<cr>$/;"	m
 ]g	plugin/third-party/coc.vim	/^nmap <silent> ]g <Plug>(coc-diagnostic-next)$/;"	m
+]n	plugin/map/normal.vim	/^nnoremap ]n :<C-U>call <SID>Tag("tag")<cr>$/;"	m
 af	plugin/third-party/coc.vim	/^omap af <Plug>(coc-funcobj-a)$/;"	m
 aso	plugin/map/command.vim	/^cnoremap aso source %$/;"	m
+bash#complete	autoload/bash.vim	/^function! bash#complete(partialCommand)$/;"	f
 check_back_space	plugin/third-party/coc.vim	/^function! s:check_back_space() abort$/;"	f
 denite_filter_my_settings	plugin/third-party/denite.vim	/^function! s:denite_filter_my_settings() abort$/;"	f
 denite_my_settings	plugin/third-party/denite.vim	/^function! s:denite_my_settings() abort$/;"	f
 filetype_vim	plugin/third-party/folding.vim	/^augroup filetype_vim$/;"	a
+g:alphabet	plugin/personal-control-mapping.vim	/^let g:alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m"$/;"	v
+g:arrows	plugin/personal-control-mapping.vim	/^let g:arrows = ["up", "down", "left", "right"]$/;"	v
 g:auto_save	plugin/third-party/autosave.vim	/^let g:auto_save = 1  " enable AutoSave on Vim startup$/;"	v
+g:coc_snippet_next	plugin/third-party/coc-snippet.vim	/^let g:coc_snippet_next = '<c-j>'$/;"	v
 g:coc_snippet_next	plugin/third-party/coc.vim	/^let g:coc_snippet_next = '<tab>'$/;"	v
 g:coc_snippet_prev	plugin/third-party/coc-snippet.vim	/^let g:coc_snippet_prev = '<s-tab>'$/;"	v
-g:keywordSwitched	plugin/map/normal.vim	/^let g:keywordSwitched = 1$/;"	v
+g:especialcharacter	plugin/template.vim	/^let g:especialcharacter = {'\\i': "identifier character (see 'isident' option)",$/;"	v
+g:gutentags_ctags_exclude	plugin/third-party/gutentags.vim	/^let g:gutentags_ctags_exclude = ['*.exe', '*.o', '*.obj', '.*.swp', '.*.swo', '.ccls-cache', '*.md']$/;"	v
+g:gutentags_exclude_project_root	plugin/third-party/gutentags.vim	/^let g:gutentags_exclude_project_root = ['usr\/local', '~\/.vim\/',$/;"	v
+g:gutentags_project_root	plugin/third-party/gutentags.vim	/^let g:gutentags_project_root = ['.git', '.hg', '.svn', '.bzr', '_darcs', '_darcs', '_FOSSIL_', '.fslckout', 'make', 'Make'. 'Makefile']$/;"	v
 g:lightline	plugin/third-party/lightline.vim	/^let g:lightline = {$/;"	v
 g:livepreview_engine	plugin/third-party/vim-latex-live-preview.vim	/^let g:livepreview_engine = 'xelatex --shell-escape'$/;"	v
 g:livepreview_previewer	plugin/third-party/vim-latex-live-preview.vim	/^let g:livepreview_previewer = 'evince'$/;"	v
+g:matchPairs	plugin/map/normal.vim	/^let g:matchPairs = ["''", "<>", "{}", '""', '[]', "()"]$/;"	v
 g:multi_cursor_next_key	plugin/third-party/multiple-cursor.vim	/^let g:multi_cursor_next_key            = '<C-n>'$/;"	v
 g:multi_cursor_prev_key	plugin/third-party/multiple-cursor.vim	/^let g:multi_cursor_prev_key            = '<C-p>'$/;"	v
 g:multi_cursor_quit_key	plugin/third-party/multiple-cursor.vim	/^let g:multi_cursor_quit_key            = '<Esc>'$/;"	v
@@ -281,13 +264,14 @@ g:multi_cursor_skip_key	plugin/third-party/multiple-cursor.vim	/^let g:multi_cur
 g:multi_cursor_start_key	plugin/third-party/multiple-cursor.vim	/^let g:multi_cursor_start_key           = 'g<C-n>'$/;"	v
 g:multi_cursor_start_word_key	plugin/third-party/multiple-cursor.vim	/^let g:multi_cursor_start_word_key      = '<C-n>'$/;"	v
 g:multi_cursor_use_default_mapping	plugin/third-party/multiple-cursor.vim	/^let g:multi_cursor_use_default_mapping=0$/;"	v
-g:switchmapped	plugin/map/normal.vim	/^let g:switchmapped = 1$/;"	v
+g:pattern	plugin/template.vim	/^let g:pattern = {'*': "0 or more as many as possible",$/;"	v
+g:personal_abbreviation	plugin/personal-abbreviation.vim	/^let g:personal_abbreviation = 1$/;"	v
 g:syntastic_always_populate_loc_list	plugin/third-party/syntastic.vim	/^let g:syntastic_always_populate_loc_list = 1$/;"	v
 g:syntastic_auto_loc_list	plugin/third-party/syntastic.vim	/^let g:syntastic_auto_loc_list = 1$/;"	v
 g:syntastic_check_on_open	plugin/third-party/syntastic.vim	/^let g:syntastic_check_on_open = 1$/;"	v
 g:syntastic_check_on_wq	plugin/third-party/syntastic.vim	/^let g:syntastic_check_on_wq = 0$/;"	v
+g:tabpager	plugin/map/tabpage.vim	/^let g:tabpager = $/;"	v
 g:template_path	autoload/template/templator.vim	/^let g:template_path = "~\/.vim\/bundle\/personal-vim\/template\/"$/;"	v
-g:template_path	plugin/template.vim	/^let g:template_path = "~\/.vim\/bundle\/personal-vim\/template\/"$/;"	v
 g:tex_insert_map	ftplugin/tex/insert-map.vim	/^let g:tex_insert_map = 1$/;"	v
 g:tex_normal_map	ftplugin/tex/normal-map.vim	/^let g:tex_normal_map = 1$/;"	v
 g:tex_visual_map	ftplugin/tex/visual-map.vim	/^let g:tex_visual_map = 1$/;"	v
@@ -315,11 +299,12 @@ g:ycm_python_sys_path	plugin/third-party/youcompletme.vim	/^let g:ycm_python_sys
 g:ycm_seed_identifiers_with_syntax	plugin/third-party/youcompletme.vim	/^let g:ycm_seed_identifiers_with_syntax = 1$/;"	v
 g:ycm_use_clangd	plugin/third-party/youcompletme.vim	/^let g:ycm_use_clangd = 1$/;"	v
 g:ycm_warning_symbol	plugin/third-party/youcompletme.vim	/^let g:ycm_warning_symbol = '⚠️ '$/;"	v
-gN	plugin/map/visual.vim	/^vnoremap gN <Esc>NNviw$/;"	m
+gN	plugin/visualMap.vim	/^vnoremap gN <Esc>NNviw$/;"	m
 gd	plugin/third-party/coc.vim	/^nmap <silent> gd <Plug>(coc-definition)$/;"	m
+get_gutentags_status	plugin/third-party/gutentags.vim	/^function! s:get_gutentags_status(mods) abort$/;"	f
 gi	plugin/third-party/coc.vim	/^nmap <silent> gi <Plug>(coc-implementation)$/;"	m
-gn	plugin/map/visual.vim	/^vnoremap gn <Esc>nviw$/;"	m
-gp	plugin/map/visual.vim	/^vnoremap gp <Esc>NNviw$/;"	m
+gn	plugin/visualMap.vim	/^vnoremap gn <Esc>nviw$/;"	m
+gp	plugin/visualMap.vim	/^vnoremap gp <Esc>NNviw$/;"	m
 gr	plugin/third-party/coc.vim	/^nmap <silent> gr <Plug>(coc-references)$/;"	m
 gy	plugin/third-party/coc.vim	/^nmap <silent> gy <Plug>(coc-type-definition)$/;"	m
 if	plugin/third-party/coc.vim	/^omap if <Plug>(coc-funcobj-i)$/;"	m
@@ -331,11 +316,7 @@ map#normal#espaciador#espaciarIzquierda	autoload/map/normal/espaciador.vim	/^fun
 map#normal#espaciador#removerEspaciadoDeAbajo	autoload/map/normal/espaciador.vim	/^function! map#normal#espaciador#removerEspaciadoDeAbajo()$/;"	f
 map#normal#espaciador#removerEspaciadoDeArriba	autoload/map/normal/espaciador.vim	/^function! map#normal#espaciador#removerEspaciadoDeArriba() $/;"	f
 map#normal#espaciador#removerNumeroDeLinea	autoload/map/normal/espaciador.vim	/^function! map#normal#espaciador#removerNumeroDeLinea()$/;"	f
-map#normal#switcher#offMatchPairComandUnMapping	autoload/map/normal/switcher.vim	/^function! map#normal#switcher#offMatchPairComandUnMapping(mode) abort "{{{$/;"	f
-map#normal#switcher#onMatchPairComandMapping	autoload/map/normal/switcher.vim	/^function! map#normal#switcher#onMatchPairComandMapping() abort "{{{$/;"	f
-map#normal#switcher#onMatchPairInsertMapping	autoload/map/normal/switcher.vim	/^function! map#normal#switcher#onMatchPairInsertMapping() abort "{{{$/;"	f
-map#normal#switcher#switchKeyword	autoload/map/normal/switcher.vim	/^function! map#normal#switcher#switchKeyword() abort "{{{$/;"	f
-map#normal#switcher#switchMatchPairMapping	autoload/map/normal/switcher.vim	/^function! map#normal#switcher#switchMatchPairMapping() abort "{{{$/;"	f
+map#normal#switcher#onMatchPairMapping	autoload/map/normal/switcher.vim	/^function! map#normal#switcher#onMatchPairMapping(mode) abort "{{{$/;"	f
 map#visual#matcherPair#putAngleBracket	autoload/map/visual/matcherPair.vim	/^function! map#visual#matcherPair#putAngleBracket()$/;"	f
 map#visual#matcherPair#putBackStick	autoload/map/visual/matcherPair.vim	/^function! map#visual#matcherPair#putBackStick()$/;"	f
 map#visual#matcherPair#putBar	autoload/map/visual/matcherPair.vim	/^function! map#visual#matcherPair#putBar()$/;"	f
@@ -348,10 +329,13 @@ map#visual#matcherPair#putSquareBracket	autoload/map/visual/matcherPair.vim	/^fu
 map#visual#matcherPair#putStar	autoload/map/visual/matcherPair.vim	/^function! map#visual#matcherPair#putStar()$/;"	f
 mygroup	plugin/third-party/coc.vim	/^augroup mygroup$/;"	a
 n	plugin/third-party/highliter.vim	/^nnoremap <silent> n :call WordNavigation('forward')<cr>$/;"	m
+q	plugin/map/tabpage.vim	/^nnoremap q :<C-U>call <SID>IrPestagna()<cr><Esc>$/;"	m
+running	plugin/personal-autocommand-insert.vim	/^	let running = jobwait([&channel], 0)[0] == -1$/;"	v
 s:hello	plugin/third-party/roxma.vim	/^let s:hello = yarp#py3('hello')$/;"	v
-s:matches	ftplugin/css/completation.vim	/^let s:matches=".fa-lg .fa-2x .fa-3x .fa-4x .fa-5x .fa-fw .fa-ul .fa-ul .fa-li .fa-li.fa-lg .fa-border .fa-pull-left .fa-pull-right .fa.fa-pull-left"$/;"	v
-s:matches	ftplugin/tex/completation.vim	/^let s:matches = ["a4paper", "letterpaper", "twoside", "oneside" , "landscape"]$/;"	v
 s:matches	ftplugin/vim/complete.vim	/^let s:matches = ["BufNewFile",$/;"	v
+s:pluginPath	autoload/bash.vim	/^let s:pluginPath = expand('<sfile>:p:h') . '\/..'$/;"	v
+s:visualblock	plugin/visual.vim	/^let s:visualblock = $/;"	v
+s:visualmode	plugin/visual.vim	/^let s:visualmode = $/;"	v
 show_documentation	plugin/third-party/coc.vim	/^function! s:show_documentation()$/;"	f
 template#dataStructure#forItem	autoload/template/dataStructure.vim	/^function! template#dataStructure#forItem() abort$/;"	f
 template#dataStructure#forKey	autoload/template/dataStructure.vim	/^function! template#dataStructure#forKey() abort$/;"	f
@@ -375,3 +359,26 @@ vim#mapper#mapControlInInsertMode	autoload/vim/mapper.vim	/^function! vim#mapper
 vim#mapper#mapMetaCapitalInInsertMode	autoload/vim/mapper.vim	/^function! vim#mapper#mapMetaCapitalInInsertMode() abort "{{{$/;"	f
 vim#mapper#mapMetaLowerInInsertMode	autoload/vim/mapper.vim	/^function! vim#mapper#mapMetaLowerInInsertMode() abort "{{{$/;"	f
 vim#mapper#mapShiftInInsertMode	autoload/vim/mapper.vim	/^function! vim#mapper#mapShiftInInsertMode() abort "{{{$/;"	f
+visualblock.cortarDerecha	plugin/visual.vim	/^function! s:visualblock.cortarDerecha() abort$/;"	f
+visualblock.cortarIzquierda	plugin/visual.vim	/^function! s:visualblock.cortarIzquierda() abort$/;"	f
+visualblock.escalar	plugin/visual.vim	/^function! s:visualblock.escalar(positionx, positiony) abort "{{{$/;"	f
+visualblock.expandir	plugin/visual.vim	/^function! s:visualblock.expandir() abort "{{{$/;"	f
+visualblock.haciaLaDerecha	plugin/visual.vim	/^function! s:visualblock.haciaLaDerecha() abort$/;"	f
+visualblock.haciaLaIzquierda	plugin/visual.vim	/^function! s:visualblock.haciaLaIzquierda() abort$/;"	f
+visualblock.initializeBlock	plugin/visual.vim	/^function! s:visualblock.initializeBlock() abort "{{{$/;"	f
+visualblock.putMatchPair	plugin/visual.vim	/^function! s:visualblock.putMatchPair(matchpair) abort "{{{$/;"	f
+visualblock.reducir	plugin/visual.vim	/^function! s:visualblock.reducir() abort "{{{$/;"	f
+visualblock.seleccionar	plugin/visual.vim	/^function! s:visualblock.seleccionar() abort "{{{$/;"	f
+visualblock.sizeHorizontal	plugin/visual.vim	/^function! s:visualblock.sizeHorizontal() abort "{{{$/;"	f
+visualblock.sizeVertical	plugin/visual.vim	/^function! s:visualblock.sizeVertical() abort "{{{$/;"	f
+visualmode.getColumna	plugin/visual.vim	/^function! s:visualmode.getColumna() dict$/;"	f
+visualmode.getLinea	plugin/visual.vim	/^function! s:visualmode.getLinea() dict$/;"	f
+visualmode.initializeVisualMode	plugin/visual.vim	/^function! s:visualmode.initializeVisualMode(linea, columna) abort$/;"	f
+visualmode.moverCursor	plugin/visual.vim	/^function! s:visualmode.moverCursor() abort$/;"	f
+visualmode.nextColumna	plugin/visual.vim	/^function! s:visualmode.nextColumna() abort$/;"	f
+visualmode.nextLinea	plugin/visual.vim	/^function! s:visualmode.nextLinea() abort$/;"	f
+visualmode.previousColumna	plugin/visual.vim	/^function! s:visualmode.previousColumna() abort$/;"	f
+visualmode.previousLinea	plugin/visual.vim	/^function! s:visualmode.previousLinea() abort$/;"	f
+visualmode.restaurarPosicion	plugin/visual.vim	/^function! s:visualmode.restaurarPosicion() abort$/;"	f
+visualmode.setColumna	plugin/visual.vim	/^function! s:visualmode.setColumna(columna) dict$/;"	f
+visualmode.setLinea	plugin/visual.vim	/^function! s:visualmode.setLinea(linea) dict$/;"	f
