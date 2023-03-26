@@ -8,3 +8,5 @@ inoremap <C-v> <C-x><C-v>
 inoremap <leader>gn <Esc>nviw
 inoremap <leader>gN <Esc>NNviw
 inoremap <leader>gp <Esc>NNviw
+
+imap <localleader>lg lightning_<c-space>

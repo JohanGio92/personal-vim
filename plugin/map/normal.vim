@@ -25,7 +25,7 @@ function! s:CreateNormalLeaderMap() abort "{{{
     nnoremap <Leader>tn :tabnew<Space>
     nnoremap <Leader>cf :execute "tabnew " . expand("<cfile>")<CR>
     nnoremap <Leader>12 :%s/\([^,]*\), \(.*\)/\2 \1/<CR>
-    nnoremap <Leader><Enter> :NERDTreeToggle<CR>
+	nnoremap <Leader><Enter> :NERDTreeToggle<CR>
     nnoremap <Leader><Leader> :
     nnoremap <Leader>fd I"-----------[ NameFolding ]------------{{{<cr><cr>}}}<Esc><up>x
 	nnoremap bd :bwipeout!<cr>

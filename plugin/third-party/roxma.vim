@@ -1,5 +1,5 @@
 " Create a python3 process running the hello module. The process is lazy load.
-let s:hello = yarp#py3('hello')
+"let s:hello = yarp#py3('hello')
 
 com HelloSync call s:hello.request('greet')
 com HelloAsync call s:hello.notify('greet')

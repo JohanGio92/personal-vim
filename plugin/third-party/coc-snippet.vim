@@ -6,7 +6,7 @@ vmap <C-k> <Plug>(coc-snippets-select)
 nnoremap <C-B> <Plug>(coc-range-select)
 vnoremap <C-B> <Plug>(coc-range-select) 
 
-let g:coc_snippet_next = '<c-j>'
+let g:coc_snippet_next = '<tab>'
 
 " Use <C-k> for jump to previous placeholder, it's default of coc.nvim
 let g:coc_snippet_prev = '<s-tab>'

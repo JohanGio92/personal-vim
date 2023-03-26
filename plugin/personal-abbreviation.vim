@@ -8,6 +8,8 @@ abbrev poq, por otro lado
 abbrev pow, por otro lado
 abbrev poh, por otro lado
 abbrev pol, por otro lado
+iabbrev lg lightning_
+
 
 function! SwapLine(sign) abort 
 	for i in range(1, v:count1)
