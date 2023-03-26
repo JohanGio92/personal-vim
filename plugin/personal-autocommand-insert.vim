@@ -37,8 +37,6 @@
 "	endif
 "endfunction
 
-=======
-
 "function! s:LeaveTerminal() abort
 "	set guicursor&
 "endfunction
@@ -49,7 +47,6 @@
 "	endif
 "endfunction
 
->>>>>>> origin/master
 "function! s:Terminal() abort
 "	set filetype=sh
 "	startinsert
