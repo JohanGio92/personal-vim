@@ -27,3 +27,4 @@ set splitright
 set listchars+=eol:$
 set encoding=utf-8
 "}}}
+

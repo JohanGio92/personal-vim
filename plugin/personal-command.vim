@@ -43,6 +43,11 @@ function SfdxDeployWrapper(flag) abort
 	execute '!sfdx force source deploy -p' .. l:currentWorkingDirectory .. a:flag
 endfunction
 
+function SfdxRetrieve() abort
+	let l:currentWorkingDirectory = getcwd() 
+	execute '!sfdx force source retrieve -p' .. l:currentWorkingDirectory
+endfunction
+
 function SfdxLightningCreate(filename) abort
 	let l:path = matchstr(getcwd(), '^/.\+/force-app/main/default/lwc')
 
@@ -63,8 +68,26 @@ function SfdxAuthorize() abort
 	execute '!sfdx auth web login ' .. '-a ' .. l:alias .. ' ' .. l:usernames[l:user - 1]
 endfunction
 
+function! SfdxApex(filename) abort
+
+	let l:path = matchstr(getcwd(), '^/.\+/force-app/main/default/classes')
+	let l:directory = matchstr(a:filename, '.\+\/')
+	let l:file = matchstr(getcwd() .. '/' .. a:filename, '.\+\/\zs.\+')
+
+	if l:path == ''
+		let l:path = 'force-app/main/default/classes/' .. l:directory
+	else
+		let l:path = l:path .. '/' .. l:directory
+	endif
+
+	execute '!sfdx apex generate class -d ' .. l:path .. ' -n ' .. l:file
+endfunction
+
+command! BufferClean :%bd|e#|bd#
+
 command! SfdxDeploy :call SfdxDeploy()
+command! SfdxRetrieve :call SfdxRetrieve()
 command! SfdxDeployCheck :call SfdxDeployCheck()
 command! -nargs=1 SfdxLightningCreate :call SfdxLightningCreate(<f-args>)
+command! -nargs=1 SfdxApex :call SfdxApex(<f-args>)
 command! SfdxAuthorize :call SfdxAuthorize()
-command! BufferClean :%bd|e#|bd#

@@ -25,9 +25,20 @@ let s:matches = ["BufNewFile",
 function! CompleteEvent() abort
     let l:linea = getline('.')
     let l:palabraImcompleta = col('.') - 1
+	
+	echomsg "linea size: " len(l:linea)
+	echomsg "colum: " l:palabraImcompleta 
+
     let l:comienzoDeLaPabra = ObtenerComienzoDeLaPalabra(copy(l:palabraImcompleta), l:linea)
-    let l:base = linea[l:comienzoDeLaPabra:l:palabraImcompleta]
-    let l:resultado = AddMatch(l:base)
+	
+	if len(l:linea) == l:palabraImcompleta
+		let l:base = linea[l:comienzoDeLaPabra:l:palabraImcompleta]
+	else
+		let l:base = linea[l:comienzoDeLaPabra:l:palabraImcompleta - 1]
+	endif
+
+	echomsg l:base
+    let l:resultado = s:AddMatch(l:base)
     call complete(l:comienzoDeLaPabra + 1, l:resultado)
     return ""
 endfunction
@@ -40,20 +51,20 @@ function! ObtenerComienzoDeLaPalabra(palabraImcompleta, linea) abort
     return l:palabraImcompleta
 endfunction
 
-function! AddMatch(base) abort
+function! s:AddMatch(base) abort
     let l:resultado = []
   
-    for l:match in s:matches
-	if(l:match =~? a:base)	
-	    call add(l:resultado, {
-			\ 'icase': 1,
-			\ 'dup': 1,
-			\ 'word': l:match,
-			\ 'abbr': l:match,
-			\ 'menu': 'event',
-			\ })
-	endif
-    endfor
+	for l:match in s:matches
+		if(l:match =~? a:base)	
+			call add(l:resultado, {
+						\ 'icase': 1,
+						\ 'dup': 1,
+						\ 'word': l:match,
+						\ 'abbr': l:match,
+						\ 'menu': 'event',
+						\ })
+		endif
+	endfor
 
     return l:resultado
 endfunction

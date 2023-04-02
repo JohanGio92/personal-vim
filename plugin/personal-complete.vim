@@ -5,6 +5,7 @@ inoremap <C-t> <C-r>=MyComplete()<CR>
 " other <C-x>* mappings)
 inoremap <expr> <C-m> pumvisible() ?  "\<C-n>" : "\<C-m>"
 
+
 " Complete function for addresses; we match the name & address
 fun! MyComplete()
     " The data. In this example it's static, but you could read it from a file,
@@ -51,3 +52,4 @@ fun! MyComplete()
     call complete(l:start + 1, l:res)
     return ''
 endfun
+
